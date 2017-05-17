@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Munchkin;
 
 /**
@@ -10,5 +5,11 @@ package Munchkin;
  * @author Lucas Hort
  */
 public class MonsterLoseLvl extends Monster{
+
+    //dmg == vida que o Player vai perder!
+    public MonsterLoseLvl(int id, String name,int level, int vida, int dmg) {
+        super(id,name,level, vida);
+        this.bd = new LoseLvlBehaviour(dmg);
+    }
     
 }

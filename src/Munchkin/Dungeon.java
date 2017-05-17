@@ -9,16 +9,15 @@ package Munchkin;
  *
  * @author Lucas Hort
  */
-public class LoseLvlBehaviour implements BadStuff{
-    int vida;
+public abstract class Dungeon {
+    private int id;
+    private String name;
 
-    public LoseLvlBehaviour(int vida) {
-        this.vida = vida;
+    public Dungeon(int id, String name) {
+        this.id = id;
+        this.name = name;
     }
     
-    @Override
-    public void badStuff() {
-        
-    }
+    
     
 }
