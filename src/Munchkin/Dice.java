@@ -9,12 +9,8 @@ package Munchkin;
  *
  * @author Lucas Hort
  */
-public class MonsterLoseItem extends Monster{
-
-    public MonsterLoseItem(int id, String name,int level, int vida) {
-        super(id,name,level, vida);
-        this.bd = new LoseItemBehaviour();
-        
+public class Dice {
+    int rollDice(){
+        return (int)(Math.random()*6+1);
     }
-    
 }

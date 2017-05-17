@@ -9,11 +9,15 @@ package Munchkin;
  *
  * @author Lucas Hort
  */
-public class MonsterLoseItem extends Monster{
+public class LoseLvlBehaviour implements BadStuff{
+    int vida;
 
-    public MonsterLoseItem(int id, String name,int level, int vida) {
-        super(id,name,level, vida);
-        this.bd = new LoseItemBehaviour();
+    public LoseLvlBehaviour(int vida) {
+        this.vida = vida;
+    }
+    
+    @Override
+    public void badStuff() {
         
     }
     
