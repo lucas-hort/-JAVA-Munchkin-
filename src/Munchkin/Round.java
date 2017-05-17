@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Munchkin;
 
 /**
@@ -11,24 +6,41 @@ package Munchkin;
  */
 public class Round {
     Dungeon dungeon;
+    Game game;
+
+    public Round(Game game) {
+        this.game = game;
+        createDungeon();
+    }
+    
+    
     
     void createDungeon(){
        int chance = (int)(Math.random()*2+1);
-       /*
        if(chance == 1){
-           //dungeon = new Monster()
-       }else
-           //dungeon = new Item()
-        */
+           this.dungeon = game.monsterList.get(0);
+       }else{
+           this.dungeon = game.itemList.get(0);
+       }
+      theRound();
     }
     
+    
+    void theRound(){
+        if (isMonster()){
+            System.out.println(this.dungeon.getName());
+        }
+        if (isItem()){
+            System.out.println(this.dungeon.getName());
+        }
+    }
+    
+    
     boolean isMonster(){
-        
-        return true;
+        return (this.dungeon instanceof Monster) ? true : false;
     }
     boolean isItem(){
-        
-        return true;
+        return (this.dungeon instanceof Item) ? true : false;
     }
     
     void addRound(){
