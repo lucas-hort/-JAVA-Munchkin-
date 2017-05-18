@@ -1,5 +1,6 @@
 package Munchkin;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -9,7 +10,7 @@ import java.util.List;
 public class Player {
     private Dice d;
     private String name;
-    private static int level;
+    private int level;
     private int combatLevel;
     private List<Item> listCards;
 
@@ -17,6 +18,7 @@ public class Player {
         this.level = 0;
         this.name = name;
         this.d = new Dice();
+        this.listCards = new ArrayList<>();
     }     
     
     //LUTA COM O MONSTRO
@@ -40,8 +42,8 @@ public class Player {
     
        
 
-    public void setListCards(List<Item> listCards) {
-        this.listCards = listCards;
+    public void setListCards(Item item) {
+        this.listCards.add(item);
     }
     
     /*----------------------- GETTERS ----------------*/
@@ -50,6 +52,14 @@ public class Player {
     }
     public int getCombatLevel() {
         return combatLevel;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getLevel() {
+        return level;
     }
     
     
@@ -62,7 +72,7 @@ public class Player {
     
     @Override
     public String toString() {
-        return "Player{" + ", name=" + name + ", level=" + level + ", combatLevel=" + combatLevel + ", listCards=" + listCards + '}';
+        return "Player{" + " name=" + this.name + ", level=" + this.level + ", combatLevel=" + combatLevel + ", listCards=" + listCards + '}';
     }
     
     

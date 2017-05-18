@@ -17,8 +17,7 @@ public class Game {
     private static int numberOfRounds = 0; //NÚMERO DE ROUNDS
     
     public List<Item> itemList;
-    public List<Monster> monsterList;
-    
+    public List<Monster> monsterList;    
     private Round round;
     private Player player;
     
@@ -27,6 +26,11 @@ public class Game {
     
     //ITEMS INICIAIS DO PLAYER
     void inicialItems(){
+        int random;
+        for (int i = 0; i < 3; i++) {
+            random = (int)Math.random()*itemList.size();
+            this.player.setListCards(itemList.remove(random));
+        }
         
     }
     
@@ -47,19 +51,19 @@ public class Game {
     }    
     
     public Player getPlayer() {
-        return player;
+        return this.player;
     }
 
     public List<Item> getItemList() {
-        return itemList;
+        return this.itemList;
     }
     
     public List<Monster> getMonsterList() {
-        return monsterList;
+        return this.monsterList;
     }
     
     public Round getRound() {
-        return round;
+        return this.round;
     }
 
     
@@ -77,7 +81,7 @@ public class Game {
     }
     
     public void setPlayer(Player p){
-        this.player = player;
+        this.player = p;
     }
 
     @Override

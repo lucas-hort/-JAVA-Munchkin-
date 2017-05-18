@@ -30,10 +30,11 @@ public class Main {
         
         Game.getINSTANCE().setItemList(itemList);
         Game.getINSTANCE().setMonsterList(monsterList);
-        Game.getINSTANCE().setPlayer(p);
-        
-        System.out.println(Game.getINSTANCE().toString());
+        Game.getINSTANCE().setPlayer(p);        
         Game.getINSTANCE().createRound();
+        System.out.println(Game.getINSTANCE().getPlayer());
+        Game.getINSTANCE().inicialItems();
+        System.out.println(Game.getINSTANCE().getPlayer());
         
     }
 }
