@@ -17,36 +17,43 @@ public class Player {
         this.level = 0;
         this.name = name;
         this.d = new Dice();
-    }  
-
-    public int getCombatLevel() {
-        return combatLevel;
-    }
-
-    public void setCombatLevel(int x) {
-        this.combatLevel = level + x;
-    }
+    }     
     
-    
+    //LUTA COM O MONSTRO
     void fight(){
         
     }
     
+    //CORRE DO MONSTRO
+    void runAway(){
+        
+    } 
+    
+    //ROLA O DADO(1 A 6)
     void rollDice(){
         System.out.println(d.rollDice());
     }
     
-    void runAway(){
-        
-    }
-
-    public List<Item> getListCards() {
-        return listCards;
-    }
+       
 
     public void setListCards(List<Item> listCards) {
         this.listCards = listCards;
     }
+    
+    /*----------------------- GETTERS ----------------*/
+    public List<Item> getListCards() {
+        return listCards;
+    }
+    public int getCombatLevel() {
+        return combatLevel;
+    }
+    
+    
+    /*----------------------- SETTERS ----------------*/
+    public void setCombatLevel(int x) {
+        this.combatLevel = level + x;
+    }
+    
     
     @Override
     public String toString() {

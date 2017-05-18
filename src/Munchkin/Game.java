@@ -12,50 +12,51 @@ import java.util.List;
  *
  * @author Lucas Hort
  */
-public class Game {
-    private static Game INSTANCE;
+public class Game {    
+    private static Game INSTANCE;  //INSTANCIA DA CLASSE GAME
+    
     public List<Item> itemList;
     public List<Monster> monsterList;
+    
     private Round round;
     private Player player;
     
     public Game(){
         
     }
-    public Game(Player player) {
+    public Game(Player player, ArrayList<Item> itemList, ArrayList<Monster> monsterList) {
+        //INSTANCIA O SINGLETON DA CLASSE
         this.INSTANCE = this;
-        this.itemList = new ArrayList<Item>();
-        this.monsterList = new ArrayList<Monster>();
+        
+        //INSTANCIA O PLAYER
         this.player = player;
-        Item item1 = new Item(0, "Item1", 3, "Mão");
-        Item item2 = new Item(1, "Item2", 1, "Braço");
-        Item item3 = new Item(2, "Item2", 2, "Perna");
-        itemList.add(item1);
-        itemList.add(item2);
-        itemList.add(item3);
-        Monster monster1 = new MonsterLoseLvl(0, "Pé de feijão", 10, 10,3);
-        Monster monster2 = new MonsterLoseLvl(1, "Matador de galinha", 5, 5,3);
-        Monster monster3 = new MonsterLoseLvl(2, "Animal de 3 olhos", 9, 9,3);
-        monsterList.add(monster1);
-        monsterList.add(monster2);
-        monsterList.add(monster3);        
+        
+        //CRIA O ROUND   
         createRound();
-    }
-
-    public static synchronized Game getINSTANCE() {
-        return INSTANCE;
-    }
+        
+        //INICIA OS ITEMS DO PLAYER
+        inicialItems();
+    }   
     
     
-    
+    //ITEMS INICIAIS DO PLAYER
     void inicialItems(){
         
     }
     
+    //CRIA OS ROUNDS DO GAME
     void createRound(){
         this.round = new Round();
     }
-
+    
+    
+    
+    /* -------------------- GETTERS -------------------*/
+    //PEGA A INSTANCIA DO SINGLETON
+    public static synchronized Game getINSTANCE() {
+        return INSTANCE;
+    }    
+    
     public Player getPlayer() {
         return player;
     }
