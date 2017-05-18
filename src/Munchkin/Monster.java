@@ -23,5 +23,10 @@ public abstract class Monster extends Dungeon {
     void performBadStuff(){
         this.bd.badStuff();
     }
+
+    @Override
+    public String toString() {
+        return "Monster{" + "level=" + level + ", vida=" + vida + ", bd=" + bd + '}';
+    }
     
 }

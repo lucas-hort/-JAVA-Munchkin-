@@ -5,22 +5,24 @@ package Munchkin;
  * @author Lucas Hort
  */
 public class Round {
-    Dungeon dungeon;
+    Monster monster;
+    Item item;
     Game game;
 
-    public Round(Game game) {
-        this.game = game;
+    public Round() {
+        this.game = Game.getINSTANCE();
         createDungeon();
     }
     
     
     
     void createDungeon(){
-       int chance = (int)(Math.random()*2+1);
+       //int chance = (int)(Math.random()*2+1);
+       int chance = 1;
        if(chance == 1){
-           this.dungeon = game.monsterList.get(0);
+           this.monster = game.monsterList.get(0);
        }else{
-           this.dungeon = game.itemList.get(0);
+           this.item = game.itemList.get(0);
        }
       theRound();
     }
@@ -28,19 +30,20 @@ public class Round {
     
     void theRound(){
         if (isMonster()){
-            System.out.println(this.dungeon.getName());
+            System.out.println(this.monster.toString());
+            this.monster.performBadStuff();
         }
         if (isItem()){
-            System.out.println(this.dungeon.getName());
+            System.out.println(this.item.getName());
         }
     }
     
     
     boolean isMonster(){
-        return (this.dungeon instanceof Monster) ? true : false;
+        return (this.monster instanceof Monster) ? true : false;
     }
     boolean isItem(){
-        return (this.dungeon instanceof Item) ? true : false;
+        return (this.item instanceof Item) ? true : false;
     }
     
     void addRound(){

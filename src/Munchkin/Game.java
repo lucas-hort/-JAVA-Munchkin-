@@ -13,12 +13,17 @@ import java.util.List;
  * @author Lucas Hort
  */
 public class Game {
-    List<Item> itemList;
-    List<Monster> monsterList;
-    Round round;
-    Player player;
-
+    private static Game INSTANCE;
+    public List<Item> itemList;
+    public List<Monster> monsterList;
+    private Round round;
+    private Player player;
+    
+    public Game(){
+        
+    }
     public Game(Player player) {
+        this.INSTANCE = this;
         this.itemList = new ArrayList<Item>();
         this.monsterList = new ArrayList<Monster>();
         this.player = player;
@@ -33,9 +38,12 @@ public class Game {
         Monster monster3 = new MonsterLoseLvl(2, "Animal de 3 olhos", 9, 9,3);
         monsterList.add(monster1);
         monsterList.add(monster2);
-        monsterList.add(monster3);
-        
+        monsterList.add(monster3);        
         createRound();
+    }
+
+    public static synchronized Game getINSTANCE() {
+        return INSTANCE;
     }
     
     
@@ -45,6 +53,12 @@ public class Game {
     }
     
     void createRound(){
-        this.round = new Round(this);
+        this.round = new Round();
     }
+
+    public Player getPlayer() {
+        return player;
+    }
+    
+    
 }

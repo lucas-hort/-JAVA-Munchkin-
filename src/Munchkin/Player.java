@@ -30,4 +30,11 @@ public class Player {
     void runAway(){
         
     }
+
+    @Override
+    public String toString() {
+        return "Player{" + ", name=" + name + ", level=" + level + ", combatLevel=" + combatLevel + ", listCards=" + listCards + '}';
+    }
+    
+    
 }

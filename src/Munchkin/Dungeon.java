@@ -25,6 +25,11 @@ public abstract class Dungeon {
     public String getName() {
         return name;
     }
+
+    @Override
+    public String toString() {
+        return "Dungeon{" + "id=" + id + ", name=" + name + '}';
+    }
     
     
     
