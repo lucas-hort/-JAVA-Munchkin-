@@ -14,10 +14,17 @@ public class Main {
         List<Monster> monsterList = new ArrayList<>();
         Item item1 = new Item(0, "Item1", 3, "Mão");
         Item item2 = new Item(1, "Item2", 1, "Braço");
-        Item item3 = new Item(2, "Item2", 2, "Perna");
+        Item item3 = new Item(2, "Item3", 2, "Perna");
+        Item item4 = new Item(3, "Item4", 3, "Mão");
+        Item item5 = new Item(4, "Item5", 1, "Braço");
+        Item item6 = new Item(5, "Item6", 2, "Perna");
         itemList.add(item1);
         itemList.add(item2);
         itemList.add(item3);
+        itemList.add(item4);
+        itemList.add(item5);
+        itemList.add(item6);
+        
         
         Monster monster1 = new MonsterLoseLvl(0, "Pé de feijão", 10, 10,3);
         Monster monster2 = new MonsterLoseLvl(1, "Matador de galinha", 5, 5,3);
