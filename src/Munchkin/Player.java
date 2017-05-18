@@ -7,16 +7,25 @@ import java.util.List;
  * @author Lucas Hort
  */
 public class Player {
-    Dice d;
-    String name;
-    int level;
-    int combatLevel;
-    List<Item> listCards;
+    private Dice d;
+    private String name;
+    private static int level;
+    private int combatLevel;
+    private List<Item> listCards;
 
-    public Player() {
+    public Player(String name) {
+        this.level = 0;
+        this.name = name;
         this.d = new Dice();
+    }  
+
+    public int getCombatLevel() {
+        return combatLevel;
     }
-    
+
+    public void setCombatLevel(int x) {
+        this.combatLevel = level + x;
+    }
     
     
     void fight(){
@@ -31,6 +40,14 @@ public class Player {
         
     }
 
+    public List<Item> getListCards() {
+        return listCards;
+    }
+
+    public void setListCards(List<Item> listCards) {
+        this.listCards = listCards;
+    }
+    
     @Override
     public String toString() {
         return "Player{" + ", name=" + name + ", level=" + level + ", combatLevel=" + combatLevel + ", listCards=" + listCards + '}';
