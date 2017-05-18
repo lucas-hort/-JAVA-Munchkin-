@@ -15,7 +15,7 @@ public class Player {
     private List<Item> listCards;
 
     public Player(String name) {
-        this.level = 0;
+        this.level = 5;
         this.name = name;
         this.d = new Dice();
         this.listCards = new ArrayList<>();
@@ -31,20 +31,17 @@ public class Player {
         
     } 
     
-    void loseLevel(int x){
-        this.level -= x;
+    void loseLevel(int dmg){
+        this.level -= dmg;
+        setCombatLevel();
     }
+    
     
     //ROLA O DADO(1 A 6)
     void rollDice(){
         System.out.println(d.rollDice());
     }
-    
-       
-
-    public void setListCards(Item item) {
-        this.listCards.add(item);
-    }
+        
     
     /*----------------------- GETTERS ----------------*/
     public List<Item> getListCards() {
@@ -65,14 +62,22 @@ public class Player {
     
     
     /*----------------------- SETTERS ----------------*/
-    public void setCombatLevel(int x) {
-        this.combatLevel = level + x;
+    public void setCombatLevel() {
+        this.combatLevel = 0;
+        for(Item e : listCards){
+            this.combatLevel += e.getBonus();
+        }   
+        this.combatLevel += level;
+    }
+    
+    public void setListCards(Item item) {
+        this.listCards.add(item);
     }
     
     
     @Override
     public String toString() {
-        return "Player{" + " name=" + this.name + ", level=" + this.level + ", combatLevel=" + combatLevel + ", listCards=" + listCards + '}';
+        return "Player:" + this.name + "\nlevel =" + this.level + "\ncombatLevel=" + combatLevel + "\nlistCards=" + listCards;
     }
     
     

@@ -7,31 +7,38 @@ package Munchkin;
 public class Round {
     Monster monster;
     Item item;
-    Game game;
 
+    
+    //INICIO DO ROUND
     public Round() {
         createDungeon();
-    }
+        theCombat();
+    }    
     
     
-    
+    //PEGA UMA CARTA ALEATORIO DO DUNGEON
     void createDungeon(){
-        this.monster = Game.getINSTANCE().monsterList.get(0);
-        System.out.println(this.monster.toString());
-       
+        int random = (int)Math.floor(Math.random()*Game.getINSTANCE().getMonsterList().size());
+        this.monster = Game.getINSTANCE().monsterList.get(random);  
+        System.out.println(this.monster);
     }
-    
-    
-    void theRound(){
+        
+    //SE FOR UM MONSTRO OU ITEM
+    void theCombat(){
         if (isMonster()){
-            System.out.println(this.monster.toString());
-            this.monster.performBadStuff();
+            gotAMonster();        
         }
         if (isItem()){
             System.out.println(this.item.getName());
         }
-    }
+    }    
     
+    
+    //PEGA UMA CARTA ALEATORIA DO DECK DE MONSTROS
+    void gotAMonster(){
+        this.monster.performBadStuff();
+    }
+        
     
     boolean isMonster(){
         return (this.monster instanceof Monster) ? true : false;

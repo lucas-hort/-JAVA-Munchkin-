@@ -16,8 +16,10 @@ public class Game {
     private static Game INSTANCE;  //INSTANCIA DA CLASSE GAME
     private static int numberOfRounds = 0; //NÚMERO DE ROUNDS
     
+    //BARALHO DE ITEMS E MONSTROS
     public List<Item> itemList;
     public List<Monster> monsterList;    
+    
     private Round round;
     private Player player;
     
@@ -27,11 +29,12 @@ public class Game {
     //ITEMS INICIAIS DO PLAYER
     void inicialItems(){
         int random;
-        for (int i = 0; i < 3; i++) {
-            random = (int)Math.random()*itemList.size();
-            this.player.setListCards(itemList.remove(random));
-        }
         
+        //TIRA 3 CARTAS ALEATORIAS DO BARALHO DE ITEM
+        for (int i = 0; i < 3; i++) {            
+            random = (int)Math.floor(Math.random()*itemList.size());
+            this.player.setListCards(itemList.remove(random));
+        }        
     }
     
     //CRIA OS ROUNDS DO GAME

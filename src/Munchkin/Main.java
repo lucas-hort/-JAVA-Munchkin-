@@ -28,13 +28,22 @@ public class Main {
         
         Player p = new Player("Lucas Hort");
         
+        //SETTANDO O GAME
         Game.getINSTANCE().setItemList(itemList);
         Game.getINSTANCE().setMonsterList(monsterList);
-        Game.getINSTANCE().setPlayer(p);        
-        Game.getINSTANCE().createRound();
+        Game.getINSTANCE().setPlayer(p);
+            
+        //TESTANDO O PLAYER
+        System.out.println("\n---------------- TESTANDO PLAYER -------------");
         System.out.println(Game.getINSTANCE().getPlayer());
         Game.getINSTANCE().inicialItems();
+        Game.getINSTANCE().getPlayer().setCombatLevel();
         System.out.println(Game.getINSTANCE().getPlayer());
+        
+        
+        System.out.println("\n---------------- TESTANDO ROUND -------------");
+        //TESTANDO RODADA
+        Game.getINSTANCE().createRound();
         
     }
 }
