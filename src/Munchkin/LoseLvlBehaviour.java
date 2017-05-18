@@ -20,7 +20,7 @@ public class LoseLvlBehaviour implements BadStuff{
     @Override
     public void badStuff() {
         doDamageToPlayer();
-        System.out.println("AHA! O monstro tirou "+vida+ " levels do Player: "+Game.getINSTANCE().getPlayer());        
+        System.out.println("AHA! O monstro tirou "+vida+ " levels do "+Game.getINSTANCE().getPlayer());        
         
     }
     

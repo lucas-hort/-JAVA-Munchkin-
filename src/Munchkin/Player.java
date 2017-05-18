@@ -22,13 +22,26 @@ public class Player {
     }     
     
     //LUTA COM O MONSTRO
-    void fight(){
-        
+    boolean fight(Monster monster){
+        if (this.combatLevel > monster.getLevel()){
+            System.out.println(this.name + " MATOU O "+ monster);
+            return true;
+        }else{            
+            System.out.println(this.name + " PERDEU PARA "+ monster);
+            return true;
+        }
     }
     
     //CORRE DO MONSTRO
-    void runAway(){
-        
+    boolean runAway(){
+        int numberDice = rollDice();
+        if (numberDice >= 3) {
+            System.out.println(this.name +" CORREU!");
+            return true;
+        }else{
+            System.out.println("INFELIZMENTE "+this.name +" LUTARÁ COM O MONSTRO!");
+            return false;
+        }
     } 
     
     void loseLevel(int dmg){
@@ -38,8 +51,8 @@ public class Player {
     
     
     //ROLA O DADO(1 A 6)
-    void rollDice(){
-        System.out.println(d.rollDice());
+    int rollDice(){
+        return d.rollDice();
     }
         
     

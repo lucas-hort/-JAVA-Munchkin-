@@ -1,5 +1,7 @@
 package Munchkin;
 
+import java.util.Scanner;
+
 /**
  *
  * @author Lucas Hort
@@ -7,11 +9,17 @@ package Munchkin;
 public class Round {
     Monster monster;
     Item item;
+    
 
+    
     
     //INICIO DO ROUND
     public Round() {
+        this.monster = null;
+        this.item = null;
+        //PEGA 1 CARTA
         createDungeon();
+        //COMEÇA A INTERAÇÃO 
         theCombat();
     }    
     
@@ -35,16 +43,43 @@ public class Round {
     
     
     //PEGA UMA CARTA ALEATORIA DO DECK DE MONSTROS
-    void gotAMonster(){
-        this.monster.performBadStuff();
+    void gotAMonster(){     
+        Scanner read = new Scanner(System.in);
+        System.out.println("\nWANT TO RUN? (YES OR NO): ");
+        String option = read.nextLine().toUpperCase();
+        
+        //OPTOU POR CORRER
+        if (option.equals("YES") || option.equals("Y")){
+            System.out.println(Game.getINSTANCE().getPlayer() + " OPTOU POR CORRER!");
+            boolean didRun = Game.getINSTANCE().getPlayer().runAway();
+            //SE CONSEGUIU CORRER
+            if(didRun){
+                //FIM
+            }
+            //SE NAO CONSEGUIU CORRER
+            else{
+               Game.getINSTANCE().getPlayer().fight(this.monster);  
+            }              
+            
+        //OPTOU POR LUTAR
+        }else{
+            
+            boolean winFight = Game.getINSTANCE().getPlayer().fight(this.monster);
+            //SE GANHOU
+            if (winFight){
+                //FIM
+            }else{
+                this.monster.performBadStuff();
+            }            
+        }        
     }
         
     
     boolean isMonster(){
-        return (this.monster instanceof Monster) ? true : false;
+        return (this.monster == null) ? false : true;
     }
     boolean isItem(){
-        return (this.item instanceof Item) ? true : false;
+        return (this.item == null) ? false : true;
     }
     
     void addRound(){
