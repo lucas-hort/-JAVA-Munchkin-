@@ -56,6 +56,11 @@ public class Player {
         return d.rollDice();
     }
     
+    //PERDE UM ITEM
+    void removeItem(){
+        listCards.remove(0);
+        setCombatLevel();
+    }
     
     //RECEBE UM ITEM
     void addItem(Item item){

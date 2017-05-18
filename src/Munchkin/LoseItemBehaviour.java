@@ -13,7 +13,18 @@ public class LoseItemBehaviour implements BadStuff{
 
     @Override
     public void badStuff() {
-        
+        System.out.println("VIXE! O monstro tirou um item do " + Game.getINSTANCE().getPlayer());  
     }
+
+    public void takeOneItem(){
+        Game.getINSTANCE().getPlayer().removeItem();
+    }
+    
+    @Override
+    public String toString() {
+        return "YOU LOOSE A ITEM";
+    }
+    
+    
     
 }
