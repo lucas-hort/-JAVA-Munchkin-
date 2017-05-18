@@ -39,8 +39,14 @@ public class Game {
     
     //CRIA OS ROUNDS DO GAME
     void createRound(){
-        this.round = new Round();
-        this.numberOfRounds++;
+        if (numberOfRounds >= 2){
+            System.out.println("\nFIM DO JOGO!!!!!!!!");
+        }else{
+            this.numberOfRounds++;
+            System.out.println("\nNUMERO DO ROUND : "+numberOfRounds);
+            this.round = new Round();            
+        }
+        
     }
     
     

@@ -39,11 +39,12 @@ public class Round {
         if (isItem()){
             System.out.println(this.item.getName());
         }
+        Game.getINSTANCE().createRound();
     }    
     
     
     //PEGA UMA CARTA ALEATORIA DO DECK DE MONSTROS
-    void gotAMonster(){     
+    void gotAMonster(){ 
         Scanner read = new Scanner(System.in);
         System.out.println("\nWANT TO RUN? (YES OR NO): ");
         String option = read.nextLine().toUpperCase();
@@ -53,22 +54,15 @@ public class Round {
             System.out.println(Game.getINSTANCE().getPlayer() + " OPTOU POR CORRER!");
             boolean didRun = Game.getINSTANCE().getPlayer().runAway();
             //SE CONSEGUIU CORRER
-            if(didRun){
-                //FIM
-            }
-            //SE NAO CONSEGUIU CORRER
-            else{
-               Game.getINSTANCE().getPlayer().fight(this.monster);  
-            }              
+            if(!didRun){
+                Game.getINSTANCE().getPlayer().fight(this.monster); 
+            }             
             
         //OPTOU POR LUTAR
-        }else{
-            
+        }else{            
             boolean winFight = Game.getINSTANCE().getPlayer().fight(this.monster);
             //SE GANHOU
-            if (winFight){
-                //FIM
-            }else{
+            if (!winFight){
                 this.monster.performBadStuff();
             }            
         }        
