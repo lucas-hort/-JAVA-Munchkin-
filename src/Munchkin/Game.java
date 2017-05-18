@@ -14,6 +14,7 @@ import java.util.List;
  */
 public class Game {    
     private static Game INSTANCE;  //INSTANCIA DA CLASSE GAME
+    private static int numberOfRounds; //NÚMERO DE ROUNDS
     
     public List<Item> itemList;
     public List<Monster> monsterList;
@@ -21,23 +22,8 @@ public class Game {
     private Round round;
     private Player player;
     
-    public Game(){
-        
-    }
-    public Game(Player player, ArrayList<Item> itemList, ArrayList<Monster> monsterList) {
-        //INSTANCIA O SINGLETON DA CLASSE
-        this.INSTANCE = this;
-        
-        //INSTANCIA O PLAYER
-        this.player = player;
-        
-        //CRIA O ROUND   
-        createRound();
-        
-        //INICIA OS ITEMS DO PLAYER
-        inicialItems();
-    }   
-    
+    public Game() {
+    }       
     
     //ITEMS INICIAIS DO PLAYER
     void inicialItems(){
@@ -47,6 +33,7 @@ public class Game {
     //CRIA OS ROUNDS DO GAME
     void createRound(){
         this.round = new Round();
+        this.numberOfRounds++;
     }
     
     
@@ -54,12 +41,54 @@ public class Game {
     /* -------------------- GETTERS -------------------*/
     //PEGA A INSTANCIA DO SINGLETON
     public static synchronized Game getINSTANCE() {
+        if(INSTANCE == null)
+            INSTANCE = new Game();
         return INSTANCE;
     }    
     
     public Player getPlayer() {
         return player;
     }
+
+    public List<Item> getItemList() {
+        return itemList;
+    }
+    
+    public List<Monster> getMonsterList() {
+        return monsterList;
+    }
+    
+    public Round getRound() {
+        return round;
+    }
+
+    
+    /* -------------------- SETTERS -------------------*/
+    public void setItemList(List<Item> itemList) {
+        this.itemList = itemList;
+    }    
+
+    public void setMonsterList(List<Monster> monsterList) {
+        this.monsterList = monsterList;
+    }    
+
+    public void setRound(Round round) {
+        this.round = round;
+    }
+    
+    public void setPlayer(Player p){
+        this.player = player;
+    }
+
+    @Override
+    public String toString() {
+        return "Game{" + "itemList=" + itemList + ", monsterList=" + monsterList + ", player=" + player + '}';
+    }
+    
+    
+    
+    
+    
     
     
 }

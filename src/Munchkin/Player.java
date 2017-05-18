@@ -29,6 +29,10 @@ public class Player {
         
     } 
     
+    void loseLevel(int x){
+        this.level -= x;
+    }
+    
     //ROLA O DADO(1 A 6)
     void rollDice(){
         System.out.println(d.rollDice());
@@ -47,6 +51,7 @@ public class Player {
     public int getCombatLevel() {
         return combatLevel;
     }
+    
     
     
     /*----------------------- SETTERS ----------------*/

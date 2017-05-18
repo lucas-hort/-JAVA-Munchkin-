@@ -10,7 +10,6 @@ public class Round {
     Game game;
 
     public Round() {
-        this.game = Game.getINSTANCE();
         createDungeon();
     }
     
@@ -20,9 +19,9 @@ public class Round {
        //int chance = (int)(Math.random()*2+1);
        int chance = 1;
        if(chance == 1){
-           this.monster = game.monsterList.get(0);
+           this.monster = Game.getINSTANCE().monsterList.get(0);
        }else{
-           this.item = game.itemList.get(0);
+           this.item = Game.getINSTANCE().itemList.get(0);
        }
       theRound();
     }
