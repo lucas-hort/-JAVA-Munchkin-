@@ -13,7 +13,19 @@ public class Item extends Dungeon{
         this.bonus = bonus;
         this.type = type;
     }
+    
+    
+    /*----------------------- GETTERS ----------------*/
+    public int getBonus() {
+        return bonus;
+    }
 
+    public String getType() {
+        return type;
+    }
+
+    
+    
     @Override
     public String toString() {
         return "Item{" + "bonus=" + bonus + ", type=" + type + '}';
