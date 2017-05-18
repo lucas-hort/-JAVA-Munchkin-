@@ -16,14 +16,9 @@ public class Round {
     
     
     void createDungeon(){
-       //int chance = (int)(Math.random()*2+1);
-       int chance = 1;
-       if(chance == 1){
-           this.monster = Game.getINSTANCE().monsterList.get(0);
-       }else{
-           this.item = Game.getINSTANCE().itemList.get(0);
-       }
-      theRound();
+        this.monster = Game.getINSTANCE().monsterList.get(0);
+        System.out.println(this.monster.toString());
+       
     }
     
     

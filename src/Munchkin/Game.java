@@ -14,7 +14,7 @@ import java.util.List;
  */
 public class Game {    
     private static Game INSTANCE;  //INSTANCIA DA CLASSE GAME
-    private static int numberOfRounds; //NÚMERO DE ROUNDS
+    private static int numberOfRounds = 0; //NÚMERO DE ROUNDS
     
     public List<Item> itemList;
     public List<Monster> monsterList;
@@ -22,7 +22,7 @@ public class Game {
     private Round round;
     private Player player;
     
-    public Game() {
+    private Game() {
     }       
     
     //ITEMS INICIAIS DO PLAYER

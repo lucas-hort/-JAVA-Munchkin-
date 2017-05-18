@@ -27,12 +27,13 @@ public class Main {
         monsterList.add(monster3);    
         
         Player p = new Player("Lucas Hort");
-        Game game = new Game();
+        
         Game.getINSTANCE().setItemList(itemList);
         Game.getINSTANCE().setMonsterList(monsterList);
         Game.getINSTANCE().setPlayer(p);
         
         System.out.println(Game.getINSTANCE().toString());
+        Game.getINSTANCE().createRound();
         
     }
 }
