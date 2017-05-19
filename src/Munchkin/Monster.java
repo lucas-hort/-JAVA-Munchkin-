@@ -6,14 +6,12 @@ package Munchkin;
  */
 public abstract class Monster extends Dungeon {
     private int level;
-    private int vida;
     
     BadStuff bd;
 
-    public Monster(int id, String name,int level, int vida) {
+    public Monster(int id, String name,int level) {
         super(id,name);
         this.level = level;
-        this.vida = vida;
     }
     
     void setBadStuff(BadStuff bd){
@@ -32,7 +30,7 @@ public abstract class Monster extends Dungeon {
 
     @Override
     public String toString() {
-        return "MONSTRO: " +this.getName() + "level=" + level + ", vida=" + vida + ", bd=" + bd + '}';
+        return "MONSTRO: " +this.getName() + " ,Level = " + level + ", BadStuff = " + bd + '}';
     }
     
 }

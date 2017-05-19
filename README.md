@@ -9,7 +9,7 @@ Trabalho para a disciplina Linguagem de Programação 2[LP2].
 
 
 #REQUISITOS
-JOGADOR X COMPUTADOR
+**JOGADOR X COMPUTADOR**
 Começa com level 0 e deve chegar a 10
 Sorteio dos itens
 Jogada:

@@ -28,7 +28,7 @@ public class Item extends Dungeon{
     
     @Override
     public String toString() {
-        return "Item{" + "bonus=" + bonus + ", type=" + type + '}';
+        return "{Item: " + this.getName() + " ,Bonus = +" + bonus + " ,Type = " + type + "}";
     }
     
     

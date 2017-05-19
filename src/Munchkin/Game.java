@@ -39,11 +39,21 @@ public class Game {
     
     //CRIA OS ROUNDS DO GAME
     void createRound(){
-        if (numberOfRounds >= 5){
-            System.out.println("\nFIM DO JOGO!!!!!!!!");
+        
+        //END OF THE GAME
+        if (numberOfRounds >= 10 || this.player.getLevel() >= 4){
+            if (numberOfRounds >= 10){
+                System.out.println(this.player);
+                System.out.println("\nFIM DO JOGO - SE PASSARAM 10 ROUNDS!!!!!!!!");
+            }else{
+                System.out.println("\nPARABÉNS VOCÊ ATINGIU O LEVEL 4!!!!!!!!");
+                System.out.println(this.player);
+            }            
+        
+        //NEXT ROUND
         }else{
             this.numberOfRounds++;
-            System.out.println("\nNUMERO DO ROUND : "+numberOfRounds);
+            System.out.println("\n>>>>>>> NUMERO DO ROUND : "+numberOfRounds+" <<<<<<<");
             this.round = new Round();            
         }
         

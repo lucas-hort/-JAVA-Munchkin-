@@ -15,7 +15,7 @@ public class Player {
     private List<Item> listCards;
 
     public Player(String name) {
-        this.level = 5;
+        this.level = 0;
         this.name = name;
         this.d = new Dice();
         this.listCards = new ArrayList<>();
@@ -25,10 +25,11 @@ public class Player {
     boolean fight(Monster monster){
         if (this.combatLevel > monster.getLevel()){
             System.out.println(this.name + " MATOU O "+ monster);
+            System.out.println(this.name + " GANHOU 1 LEVEL, LEVEL ATUAL = " + (this.level+1) + ", COMBAT LEVEL ATUAL = "+ (this.combatLevel+1));
             return true;
         }else{            
             System.out.println(this.name + " PERDEU PARA "+ monster);
-            return true;
+            return false;
         }
     }
     
@@ -50,16 +51,33 @@ public class Player {
         setCombatLevel();
     }
     
+    //ADD LEVEL
+    void addLevel(){
+        this.level += 1;
+        setCombatLevel();
+    }
     
     //ROLA O DADO(1 A 6)
     int rollDice(){
         return d.rollDice();
     }
     
+    //PERDE UM ITEM
+    void removeItems(int item){
+        if (item == -1)
+            this.listCards = new ArrayList<>();
+        else{
+            for (int i = 0; i < item; i++){
+                if(listCards.size() > 0)
+                    this.listCards.remove(i);
+            }                
+        }            
+        setCombatLevel();
+    }
     
     //RECEBE UM ITEM
     void addItem(Item item){
-        listCards.add(item);
+        this.listCards.add(item);
         setCombatLevel();
     }
     
@@ -100,7 +118,7 @@ public class Player {
     
     @Override
     public String toString() {
-        return "Player:" + this.name + "\nlevel =" + this.level + "\ncombatLevel=" + combatLevel + "\nlistCards=" + listCards;
+        return "Player: " + this.name + "\nLevel = " + this.level + "\nCombat level = " + combatLevel + "\nList of Items = " + listCards;
     }
     
     
