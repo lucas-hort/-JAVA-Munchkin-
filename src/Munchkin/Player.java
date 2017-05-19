@@ -15,7 +15,7 @@ public class Player {
     private List<Item> listCards;
 
     public Player(String name) {
-        this.level = 5;
+        this.level = 0;
         this.name = name;
         this.d = new Dice();
         this.listCards = new ArrayList<>();
