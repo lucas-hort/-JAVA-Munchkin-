@@ -5,12 +5,22 @@
  */
 package Munchkin;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /**
  *
  * @author Lucas Hort
  */
 public class Dice {
+    
     int rollDice(){
+        System.out.println("\nRolando o dado....");
+        try {
+            Thread.currentThread().sleep(3000);
+        } catch (InterruptedException ex) {
+            Logger.getLogger(Dice.class.getName()).log(Level.SEVERE, null, ex);
+        }
         return (int)(Math.random()*6+1);
     }
 }
