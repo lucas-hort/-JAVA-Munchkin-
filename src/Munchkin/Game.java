@@ -41,12 +41,12 @@ public class Game {
     void createRound(){
         
         //END OF THE GAME
-        if (numberOfRounds >= 10 || this.player.getLevel() >= 10){
+        if (numberOfRounds >= 10 || this.player.getLevel() >= 4){
             if (numberOfRounds >= 10){
                 System.out.println(this.player);
                 System.out.println("\nFIM DO JOGO - SE PASSARAM 10 ROUNDS!!!!!!!!");
             }else{
-                System.out.println("\nPARABÉNS VOCÊ ATINGIU O LEVEL 10!!!!!!!!");
+                System.out.println("\nPARABÉNS VOCÊ ATINGIU O LEVEL 4!!!!!!!!");
                 System.out.println(this.player);
             }            
         

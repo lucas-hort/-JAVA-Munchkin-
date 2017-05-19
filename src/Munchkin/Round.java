@@ -55,7 +55,7 @@ public class Round {
     }
 
     //SE FOR UM MONSTRO OU ITEM
-    void theCombat() {
+    void theCombat() {        
         if (isMonster()) {
             System.out.println("\nFIGHT WITH A MONSTER");
             System.out.println(this.monster);

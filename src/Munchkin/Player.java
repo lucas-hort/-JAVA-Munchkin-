@@ -67,9 +67,10 @@ public class Player {
         if (item == -1)
             this.listCards = new ArrayList<>();
         else{
-            for (int i = 0; i < item; i++)
+            for (int i = 0; i < item; i++){
                 if(listCards.size() > 0)
-                    this.listCards.remove(0);
+                    this.listCards.remove(i);
+            }                
         }            
         setCombatLevel();
     }
