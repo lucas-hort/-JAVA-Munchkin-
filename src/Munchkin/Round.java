@@ -36,7 +36,7 @@ public class Round {
             try{
                 random = (int)Math.floor(Math.random()*Game.getINSTANCE().getMonsterList().size());
                 this.monster = Game.getINSTANCE().monsterList.remove(random);  
-                System.out.println(this.monster);
+                
             }catch(IndexOutOfBoundsException e){
                 System.out.println(e);
                 System.out.println("SEM CARTAS DE MONSTRO");
@@ -46,7 +46,7 @@ public class Round {
             try{
                 random = (int)Math.floor(Math.random()*Game.getINSTANCE().getItemList().size());
                 this.item = Game.getINSTANCE().itemList.remove(random);
-                System.out.println(this.item);
+                
             }catch(IndexOutOfBoundsException e){
                 System.out.println(e);
                 System.out.println("SEM CARTAS DE ITEM");
@@ -58,9 +58,13 @@ public class Round {
     //SE FOR UM MONSTRO OU ITEM
     void theCombat(){
         if (isMonster()){
+            System.out.println("\nFIGHT WITH A MONSTER");
+            System.out.println(this.monster);
             gotAMonster();   
         }
         if (isItem()){
+            System.out.println("\nYOU GOT AN ITEM!\n");
+            System.out.println(this.item);
             gotAItem();
         }
         Game.getINSTANCE().createRound();
@@ -85,7 +89,7 @@ public class Round {
         //OPTOU POR LUTAR
         }else{            
             boolean winFight = Game.getINSTANCE().getPlayer().fight(this.monster);
-            //SE GANHOU
+            //SE NÃO GANHOU
             if (!winFight){
                 this.monster.performBadStuff();
             }            

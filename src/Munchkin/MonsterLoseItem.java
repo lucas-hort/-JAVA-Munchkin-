@@ -11,8 +11,8 @@ package Munchkin;
  */
 public class MonsterLoseItem extends Monster{
 
-    public MonsterLoseItem(int id, String name,int level, int vida) {
-        super(id,name,level, vida);
+    public MonsterLoseItem(int id, String name,int level) {
+        super(id,name,level);
         this.bd = new LoseItemBehaviour();
         
     }

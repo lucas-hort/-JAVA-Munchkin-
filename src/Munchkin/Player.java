@@ -28,7 +28,7 @@ public class Player {
             return true;
         }else{            
             System.out.println(this.name + " PERDEU PARA "+ monster);
-            return true;
+            return false;
         }
     }
     
@@ -105,7 +105,7 @@ public class Player {
     
     @Override
     public String toString() {
-        return "Player:" + this.name + "\nlevel =" + this.level + "\ncombatLevel=" + combatLevel + "\nlistCards=" + listCards;
+        return "Player: " + this.name + "\nLevel = " + this.level + "\nCombat level = " + combatLevel + "\nList of Items = " + listCards;
     }
     
     

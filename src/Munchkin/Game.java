@@ -43,7 +43,7 @@ public class Game {
             System.out.println("\nFIM DO JOGO!!!!!!!!");
         }else{
             this.numberOfRounds++;
-            System.out.println("\nNUMERO DO ROUND : "+numberOfRounds);
+            System.out.println("\n>>>>>>> NUMERO DO ROUND : "+numberOfRounds+" <<<<<<<");
             this.round = new Round();            
         }
         
