@@ -37,11 +37,11 @@ public class Main {
         Monster monster3 = new MonsterLoseLvl(2, "Harold Angel", 6,1); // 1 level
         Monster monster4 = new MonsterLoseLvl(3, "Undead Horse", 4,1); // 1 level
         Monster monster5 = new MonsterLoseLvl(4, "Knight of The Living Dead", 11,2); //2 levels
-        Monster monster6 = new MonsterLoseItem(5, "The Ether Bunny", 8); // 1 item
-        Monster monster7 = new MonsterLoseItem(6, "Duck Holliday", 6);// 1 item
-        Monster monster8 = new MonsterLoseItem(7, "Dragonfly ", 10);// 1 item
-        Monster monster9 = new MonsterLoseItem(8, "Blue-Eyes White Dragon", 30);// all fucking items
-        Monster monster10 = new MonsterLoseItem(9, "A Mimic?!!", 15);// 2 items
+        Monster monster6 = new MonsterLoseItem(5, "The Ether Bunny", 8,1); // 1 item
+        Monster monster7 = new MonsterLoseItem(6, "Duck Holliday", 6,1);// 1 item
+        Monster monster8 = new MonsterLoseItem(7, "Dragonfly ", 10,1);// 1 item
+        Monster monster9 = new MonsterLoseItem(8, "Blue-Eyes White Dragon", 30,-1);// all fucking items
+        Monster monster10 = new MonsterLoseItem(9, "A Mimic?!!", 15,2);// 2 items
         monsterList.add(monster1);
         monsterList.add(monster2);
         monsterList.add(monster3);    

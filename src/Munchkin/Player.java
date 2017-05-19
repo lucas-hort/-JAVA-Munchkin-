@@ -25,6 +25,7 @@ public class Player {
     boolean fight(Monster monster){
         if (this.combatLevel > monster.getLevel()){
             System.out.println(this.name + " MATOU O "+ monster);
+            System.out.println(this.name + " GANHOU 1 LEVEL, LEVEL ATUAL = " + (this.level+1) + ", COMBAT LEVEL ATUAL = "+ (this.combatLevel+1));
             return true;
         }else{            
             System.out.println(this.name + " PERDEU PARA "+ monster);
@@ -62,8 +63,14 @@ public class Player {
     }
     
     //PERDE UM ITEM
-    void removeItems(){
-        this.listCards = new ArrayList<>();
+    void removeItems(int item){
+        if (item == -1)
+            this.listCards = new ArrayList<>();
+        else{
+            for (int i = 0; i < item; i++)
+                if(listCards.size() > 0)
+                    this.listCards.remove(0);
+        }            
         setCombatLevel();
     }
     

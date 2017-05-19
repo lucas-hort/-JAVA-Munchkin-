@@ -66,7 +66,7 @@ public class Round {
             System.out.println(this.item);
             gotAItem();
             try {
-                Thread.currentThread().sleep(2000);
+                Thread.currentThread().sleep(4000);
             } catch (InterruptedException ex) {
                 Logger.getLogger(Round.class.getName()).log(Level.SEVERE, null, ex);
             }
