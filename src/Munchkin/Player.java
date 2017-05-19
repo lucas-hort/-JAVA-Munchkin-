@@ -50,6 +50,11 @@ public class Player {
         setCombatLevel();
     }
     
+    //ADD LEVEL
+    void addLevel(){
+        this.level += 1;
+        setCombatLevel();
+    }
     
     //ROLA O DADO(1 A 6)
     int rollDice(){
@@ -57,14 +62,14 @@ public class Player {
     }
     
     //PERDE UM ITEM
-    void removeItem(){
-        listCards.remove(0);
+    void removeItems(){
+        this.listCards = new ArrayList<>();
         setCombatLevel();
     }
     
     //RECEBE UM ITEM
     void addItem(Item item){
-        listCards.add(item);
+        this.listCards.add(item);
         setCombatLevel();
     }
     

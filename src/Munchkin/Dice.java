@@ -21,6 +21,8 @@ public class Dice {
         } catch (InterruptedException ex) {
             Logger.getLogger(Dice.class.getName()).log(Level.SEVERE, null, ex);
         }
-        return (int)(Math.random()*6+1);
+        int number = (int)(Math.random()*6+1);
+        System.out.println("Você tirou "+number+ " no DADO!");
+        return number;        
     }
 }

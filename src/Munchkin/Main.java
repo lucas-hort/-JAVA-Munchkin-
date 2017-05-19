@@ -30,8 +30,8 @@ public class Main {
         Monster monster2 = new MonsterLoseLvl(1, "Matador de galinha", 5,3);
         Monster monster3 = new MonsterLoseLvl(2, "Animal de 3 olhos", 9,3);
         Monster monster4 = new MonsterLoseItem(3, "Calculo 4", 20);
-        Monster monster5 = new MonsterLoseItem(3, "Calculo 5", 30);
-        Monster monster6 = new MonsterLoseItem(3, "Calculo 6", 40);
+        Monster monster5 = new MonsterLoseItem(4, "Calculo 5", 30);
+        Monster monster6 = new MonsterLoseItem(5, "Calculo 6", 40);
         monsterList.add(monster1);
         monsterList.add(monster2);
         monsterList.add(monster3);    
