@@ -2,6 +2,7 @@ package Munchkin;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 /**
  *
@@ -14,6 +15,13 @@ public class Player {
     private int level;
     private int combatLevel;
     private List<Item> listCards;
+
+    //GEARS
+    private boolean ONEHAND;
+    private boolean TWOHANDS;
+    private boolean HEADGEAR;
+    private boolean FOOTGEAR;
+    private boolean BIG;
 
     public Player(String name) {
         this.level = 0;
@@ -112,7 +120,7 @@ public class Player {
     }
 
     public void setListCards(Item item) {
-        this.listCards.add(item);
+        this.listCards.add(item); 
     }
 
     public void setName(String name) {
@@ -121,7 +129,7 @@ public class Player {
 
     @Override
     public String toString() {
-        return "Player: " + this.name + "\nLevel = " + this.level + "\nCombat level = " + combatLevel + "\nList of Items ["+listCards.size()+"] = " + listCards;
+        return "Player: " + this.name + "\nLevel = " + this.level + "\nCombat level = " + combatLevel + "\nList of Items [" + listCards.size() + "] = " + listCards;
     }
 
 }

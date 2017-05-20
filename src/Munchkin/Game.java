@@ -28,11 +28,10 @@ public class Game {
     
     //ITEMS INICIAIS DO PLAYER
     void inicialItems(){
-        int random;
-        
+        int random;        
         //TIRA 3 CARTAS ALEATORIAS DO BARALHO DE ITEM
         for (int i = 0; i < 3; i++) {            
-            random = (int)Math.floor(Math.random()*itemList.size());
+            random = (int)Math.floor(Math.random()*this.itemList.size());
             this.player.setListCards(itemList.remove(random));
         }        
     }

@@ -29,7 +29,7 @@ public class LoseLvlBehaviour implements BadStuff {
 
     }
 
-    public void doDamageToPlayer() {
+    private void doDamageToPlayer() {
         Game.getINSTANCE().getPlayer().loseLevel(damage);
     }
 
