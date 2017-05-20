@@ -31,7 +31,7 @@ public class LoseLvlBehaviour implements BadStuff{
     
     @Override
     public String toString() {
-        return "MAKE O LOOSE " + vida + " LEVELS";
+        return "MAKE YOU LOOSE " + vida + " LEVELS";
     }
     
     

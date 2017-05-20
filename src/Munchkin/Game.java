@@ -37,26 +37,18 @@ public class Game {
         }        
     }
     
-    //CRIA OS ROUNDS DO GAME
-    void createRound(){
-        
+    //CRIA OS ROUNDS DO GAME, SE O PLAYER ATINGIR LVL 10 OU NUMERO DE ROUNDS EXCEDER 20 PARTIDAS ACABA O GAME
+    boolean createRound(){        
         //END OF THE GAME
-        if (numberOfRounds >= 10 || this.player.getLevel() >= 4){
-            if (numberOfRounds >= 10){
-                System.out.println(this.player);
-                System.out.println("\nFIM DO JOGO - SE PASSARAM 10 ROUNDS!!!!!!!!");
-            }else{
-                System.out.println("\nPARABÉNS VOCÊ ATINGIU O LEVEL 4!!!!!!!!");
-                System.out.println(this.player);
-            }            
-        
+        if (this.numberOfRounds >= 10 || this.player.getLevel() >= 4){
+            return true;
         //NEXT ROUND
         }else{
             this.numberOfRounds++;
-            System.out.println("\n>>>>>>> NUMERO DO ROUND : "+numberOfRounds+" <<<<<<<");
-            this.round = new Round();            
-        }
-        
+            //CRIA UMA RODADA
+            this.round = new Round();
+            return false;
+        }        
     }
     
     
@@ -84,6 +76,11 @@ public class Game {
     public Round getRound() {
         return this.round;
     }
+
+    public static int getNumberOfRounds() {
+        return numberOfRounds;
+    }
+    
 
     
     /* -------------------- SETTERS -------------------*/

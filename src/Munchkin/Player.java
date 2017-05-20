@@ -23,12 +23,9 @@ public class Player {
     
     //LUTA COM O MONSTRO
     boolean fight(Monster monster){
-        if (this.combatLevel > monster.getLevel()){
-            System.out.println(this.name + " MATOU O "+ monster);
-            System.out.println(this.name + " GANHOU 1 LEVEL, LEVEL ATUAL = " + (this.level+1) + ", COMBAT LEVEL ATUAL = "+ (this.combatLevel+1));
+        if (this.combatLevel > monster.getLevel()){            
             return true;
-        }else{            
-            System.out.println(this.name + " PERDEU PARA "+ monster);
+        }else{ 
             return false;
         }
     }
@@ -36,11 +33,9 @@ public class Player {
     //CORRE DO MONSTRO
     boolean runAway(){
         int numberDice = rollDice();
-        if (numberDice >= 3) {
-            System.out.println(this.name +" CORREU!");
+        if (numberDice >= 3) {            
             return true;
-        }else{
-            System.out.println("INFELIZMENTE "+this.name +" LUTARÁ COM O MONSTRO!");
+        }else{            
             return false;
         }
     } 

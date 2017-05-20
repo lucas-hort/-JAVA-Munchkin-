@@ -17,16 +17,19 @@ public class Round {
     public Round() {
         this.monster = null;
         this.item = null;
-
+        
+        /*
         //PEGA 1 CARTA
         createDungeon();
 
         //COMEÇA A INTERAÇÃO 
-        theCombat();
+        theCombat(); */
     }
+    
+    
 
     //PEGA UMA CARTA ALEATORIO DO DUNGEON
-    void createDungeon() {
+    void getARandomCard() {
         int random;
         int monsterOrItem = (int) (Math.random() * 2 + 1);
         //1 = MONSTRO
@@ -52,62 +55,21 @@ public class Round {
             }
         }
 
-    }
-
-    //SE FOR UM MONSTRO OU ITEM
-    void theCombat() {        
-        if (isMonster()) {
-            System.out.println("\nFIGHT WITH A MONSTER");
-            System.out.println(this.monster);
-            gotAMonster();
-        }
-        if (isItem()) {
-            System.out.println("\nYOU GOT AN ITEM!\n");
-            System.out.println(this.item);
-            gotAItem();
-            try {
-                Thread.currentThread().sleep(4000);
-            } catch (InterruptedException ex) {
-                Logger.getLogger(Round.class.getName()).log(Level.SEVERE, null, ex);
-            }
-        }
-        Game.getINSTANCE().createRound();
-    }
-
-    //SE PEGAR UMA CARTA ALEATORIA DO DECK DE MONSTROS
-    void gotAMonster() {
-        Scanner read = new Scanner(System.in);
-        System.out.println("\nWANT TO RUN? (YES OR NO): ");
-        String option = read.nextLine().toUpperCase();
-
-        //OPTOU POR CORRER
-        if (option.equals("YES") || option.equals("Y")) {
-            System.out.println(Game.getINSTANCE().getPlayer() + " OPTOU POR CORRER!");
-            boolean didRun = Game.getINSTANCE().getPlayer().runAway();
-            //SE NÃO CONSEGUIU CORRER
-            if (!didRun) {
-                fightWithMonster();
-            }
-            
-        //OPTOU POR LUTAR
-        } else {
-            fightWithMonster();
-        }
-    }
+    }    
     
     //LUTAR COM O MONSTRO
-    void fightWithMonster(){
+    boolean fightWithMonster(){
         boolean winFight = Game.getINSTANCE().getPlayer().fight(this.monster);
             //SE NÃO GANHOU
-            if (!winFight) {
-                this.monster.performBadStuff();
+            if (winFight) {
+                return true;                
             } else {
-                Game.getINSTANCE().getPlayer().addLevel();
+                return false;                
             }
     }    
     
     //SE PEGAR UMA CARTA ALEATORIA DO DECK DE ITEM
-    void gotAItem() {
+    void gotAnItem() {
         Game.getINSTANCE().getPlayer().addItem(this.item);
         System.out.println(Game.getINSTANCE().getPlayer() + " PEGOU O ITEM!");
     }
@@ -120,7 +82,20 @@ public class Round {
         return (this.item == null) ? false : true;
     }
 
-    void addRound() {
 
+    
+    /* -------------------- GETTERS -------------------*/
+    
+    public Monster getMonster() {
+        return monster;
     }
+
+    public Item getItem() {
+        return item;
+    }
+    
+    
+
+    
+    
 }
