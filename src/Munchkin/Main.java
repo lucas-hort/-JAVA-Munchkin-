@@ -58,7 +58,7 @@ public class Main {
 
         //INICIO DO GAME      
         Scanner entrada = new Scanner(System.in);
-        System.out.println("Digite o nick do player: ");
+        System.out.println("DIGITE O NICK DO PLAYER: ");
         String nome = entrada.nextLine();
         Player p = new Player(nome);
 
@@ -68,6 +68,8 @@ public class Main {
         System.out.println("--------------------------------------------");
         System.out.println("--------------------------------------------");
         System.out.println("----------------- BEM - VINDO --------------");
+        System.out.println("----------------- "+nome+" --------------\n");
+        
         Game.getINSTANCE().setItemList(itemList);
         Game.getINSTANCE().setMonsterList(monsterList);
         Game.getINSTANCE().setPlayer(p);
@@ -84,13 +86,13 @@ public class Main {
         /* -------------- WANNA PLAY KIDO?! --------------*/
 
         //INICIO DOS ROUNDS
-        System.out.println("\n---------------- LET'S START =] -------------");
+        System.out.println("\n>---------------- LET'S START =] -------------<");
 
         while (true) {
-            boolean rounds = Game.getINSTANCE().createRound();
+            boolean roundsLimit = Game.getINSTANCE().createRound();
 
-            //CONDIÇÃO DE FIM DO JOGO
-            if (rounds) {
+            //CONDIÇÃO DE FIM DO JOGO , 10 RODADAS OU LVL 10
+            if (roundsLimit) {
                 //FIM DO JOGO
                 endGame();
                 break;
@@ -103,8 +105,8 @@ public class Main {
     }
 
     public static void endGame() {
-        if (Game.getINSTANCE().getNumberOfRounds() >= 10) {
-            System.out.println("\nFIM DO JOGO - SE PASSARAM 10 ROUNDS!!!!!!!!");
+        if (Game.getINSTANCE().getNumberOfRounds() >= 20) {
+            System.out.println("\nFIM DO JOGO - SE PASSARAM 20 ROUNDS!!!!!!!!");
             System.out.println(Game.getINSTANCE().getPlayer());
         } else {
             System.out.println("\nPARABÉNS VOCÊ ATINGIU O LEVEL 4!!!!!!!!");
@@ -113,7 +115,10 @@ public class Main {
     }
 
     public static void round() {
-        System.out.println("\n>>>>>>> NUMERO DO ROUND : " + Game.getINSTANCE().getNumberOfRounds() + " <<<<<<<");
+        Scanner entrada = new Scanner(System.in);
+        System.out.println("\n\n*-----------------------------------------*");
+        System.out.println("*---------- NUMERO DO ROUND : " + Game.getINSTANCE().getNumberOfRounds() + " ----------*");
+        System.out.println("*-----------------------------------------*");
 
         //PEGA UMA CARTA ALEATORIA DA DUNGEON
         Game.getINSTANCE().getRound().getARandomCard();
@@ -139,11 +144,10 @@ public class Main {
             System.out.println("\nYOU GOT AN ITEM!\n");
             System.out.println(Game.getINSTANCE().getRound().getItem());
             Game.getINSTANCE().getRound().gotAnItem();
-            try {
-                Thread.currentThread().sleep(4000);
-            } catch (InterruptedException ex) {
-                Logger.getLogger(Round.class.getName()).log(Level.SEVERE, null, ex);
-            }
+            System.out.println(Game.getINSTANCE().getPlayer() + "\nVOCÊ PEGOU O ITEM!");
+            
+            System.out.println("\nPRESS A BUTTON TO CONTINUE: ");
+            String nextRound = entrada.nextLine();
         }
     }
 
@@ -156,7 +160,7 @@ public class Main {
                 System.out.println(Game.getINSTANCE().getPlayer() + " CORREU!");
             } //HE FAILED TO RUN
             else {
-                System.out.println("INFELIZMENTE " + Game.getINSTANCE().getPlayer() + " LUTARÁ COM O MONSTRO!");
+                System.out.println("INFELIZMENTE " + Game.getINSTANCE().getPlayer() + " TERÁ QUE LUTAR COM O MONSTRO!");
                 fight();
             }
         }

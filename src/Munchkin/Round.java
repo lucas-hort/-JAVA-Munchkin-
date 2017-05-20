@@ -70,8 +70,7 @@ public class Round {
     
     //SE PEGAR UMA CARTA ALEATORIA DO DECK DE ITEM
     void gotAnItem() {
-        Game.getINSTANCE().getPlayer().addItem(this.item);
-        System.out.println(Game.getINSTANCE().getPlayer() + " PEGOU O ITEM!");
+        Game.getINSTANCE().getPlayer().addItem(this.item);        
     }
 
     boolean isMonster() {

@@ -40,7 +40,7 @@ public class Game {
     //CRIA OS ROUNDS DO GAME, SE O PLAYER ATINGIR LVL 10 OU NUMERO DE ROUNDS EXCEDER 20 PARTIDAS ACABA O GAME
     boolean createRound(){        
         //END OF THE GAME
-        if (this.numberOfRounds >= 10 || this.player.getLevel() >= 4){
+        if (this.numberOfRounds >= 20 || this.player.getLevel() >= 10){
             return true;
         //NEXT ROUND
         }else{
