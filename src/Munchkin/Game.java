@@ -32,7 +32,7 @@ public class Game {
         //TIRA 3 CARTAS ALEATORIAS DO BARALHO DE ITEM
         for (int i = 0; i < 3; i++) {            
             random = (int)Math.floor(Math.random()*this.itemList.size());
-            this.player.setListCards(itemList.remove(random));
+            this.player.addItem(itemList.remove(random));
         }        
     }
     

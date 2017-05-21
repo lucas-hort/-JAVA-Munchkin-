@@ -17,11 +17,11 @@ public class Player {
     private List<Item> listCards;
 
     //GEARS
-    private boolean ONEHAND;
-    private boolean TWOHANDS;
-    private boolean HEADGEAR;
-    private boolean FOOTGEAR;
-    private boolean BIG;
+    private Item ONEHAND;
+    private Item TWOHANDS;
+    private Item HEADGEAR;
+    private Item FOOTGEAR;
+    private Item BIG;
 
     public Player(String name) {
         this.level = 0;
@@ -41,7 +41,7 @@ public class Player {
 
     //CORRE DO MONSTRO
     boolean runAway() {
-        int numberDice = rollDice();
+        int numberDice = d.rollDice();
         if (numberDice >= 3) {
             return true;
         } else {
@@ -53,19 +53,14 @@ public class Player {
     void loseLevel(int dmg) {
         if (this.level != 0) {
             this.level -= dmg;
-            setCombatLevel();
+            updateCombatLevel();
         }
     }
 
     //ADD LEVEL
     void addLevel() {
         this.level += 1;
-        setCombatLevel();
-    }
-
-    //ROLA O DADO(1 A 6)
-    int rollDice() {
-        return d.rollDice();
+        updateCombatLevel();
     }
 
     //PERDE UM ITEM
@@ -83,13 +78,22 @@ public class Player {
             }
         }
         //RECALCULA O COMBATLEVEL DO PLAYER
-        setCombatLevel();
+        updateCombatLevel();        
     }
 
     //RECEBE UM ITEM
     void addItem(Item item) {
-        this.listCards.add(item);
-        setCombatLevel();
+        setListCards(item);
+        updateCombatLevel();
+    }
+    
+    //CALCULA O COMBAT LEVEL
+    public void updateCombatLevel() {
+        this.combatLevel = 0;
+        for (Item e : listCards) {
+            this.combatLevel += e.getBonus();
+        }
+        this.combatLevel += level;
     }
 
     /*----------------------- GETTERS ----------------*/
@@ -110,17 +114,34 @@ public class Player {
     }
 
     /*----------------------- SETTERS ----------------*/
-    //CALCULA O COMBAT LEVEL
-    public void setCombatLevel() {
-        this.combatLevel = 0;
-        for (Item e : listCards) {
-            this.combatLevel += e.getBonus();
-        }
-        this.combatLevel += level;
-    }
-
     public void setListCards(Item item) {
-        this.listCards.add(item); 
+        System.out.println(" \nITEM RECEBIDO: "+item);
+        Scanner entrada = new Scanner(System.in);
+        int sizeOfArray = listCards.size();
+        boolean hasItem = false;
+        if(listCards.isEmpty()){
+              this.listCards.add(item);          
+        }else{ 
+            for (int i = 0; i < sizeOfArray; i++) {                
+                //SE O TIPO DO ITEM FOR IGUAL AO JA EXISTENTE NO INVENTARIO
+                
+                //SE FOR IGUAL
+                if(listCards.get(i).getType().equals(item.getType())){
+                    System.out.println("VOCÊ JA TEM UM ITEM DO TIPO "+listCards.get(i).getType());
+                    System.out.println("DESEJA ALTERAR O ITEM: "+listCards.get(i)+ " [YES / NO]?");
+                    String choice = entrada.nextLine().toUpperCase();
+                    if(choice.equals("YES") || choice.equals("Y")){
+                        listCards.remove(listCards.get(i));
+                        listCards.add(item);
+                        hasItem = true;
+                        break;
+                    } 
+                }                                   
+            }
+            if(!hasItem)
+                this.listCards.add(item);
+        }
+        
     }
 
     public void setName(String name) {

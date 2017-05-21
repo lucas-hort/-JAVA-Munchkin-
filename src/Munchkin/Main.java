@@ -24,7 +24,7 @@ public class Main {
         Item item6 = new Item(5, "Birdhouse", 4, "Headgear");
         Item item7 = new Item(6, "Forked Tongue", 2, "Headgear");
         Item item8 = new Item(7, "Your own pancreas", 4, "1 Hand");
-        Item item9 = new Item(8, "Sneaky Bastard Sword", 4, "1 or 2 Hands");
+        Item item9 = new Item(8, "Sneaky Bastard Sword", 4, "2 Hands");
         itemList.add(item1);
         itemList.add(item2);
         itemList.add(item3);
@@ -44,7 +44,7 @@ public class Main {
         Monster monster7 = new MonsterLoseItem(6, "Duck Holliday", 6, 1);// 1 item
         Monster monster8 = new MonsterLoseItem(7, "Dragonfly ", 10, 1);// 1 item
         Monster monster9 = new MonsterLoseItem(8, "Blue-Eyes White Dragon", 30, -1);// all fucking items
-        Monster monster10 = new MonsterLoseItem(9, "A Mimic?!!", 15, 2);// 2 items
+        Monster monster10 = new MonsterLoseItem(9, "A Mimic?!!", 15, 3);// 3 items
         monsterList.add(monster1);
         monsterList.add(monster2);
         monsterList.add(monster3);
@@ -75,10 +75,10 @@ public class Main {
         Game.getINSTANCE().setPlayer(p);
 
         //TESTANDO O PLAYER
-        System.out.println("\n---------------- STATUS INICIAL DO PLAYER! -------------");
+        System.out.println("\n---------------- STATUS INICIAL DO PLAYER! -------------\n");
         Game.getINSTANCE().inicialItems();                      //ITEMS INICIAIS DO PLAYER
-        Game.getINSTANCE().getPlayer().setCombatLevel();        //SETANDO O NIVEL DE COMBAT TO PLAYER
-        System.out.println(Game.getINSTANCE().getPlayer());     //PRINTANDO OS STATUS DO PLAYER
+        Game.getINSTANCE().getPlayer().updateCombatLevel();     //SETANDO O NIVEL DE COMBAT TO PLAYER
+        System.out.println("\n"+Game.getINSTANCE().getPlayer());     //PRINTANDO OS STATUS DO PLAYER
 
         /* -------------- WANNA PLAY KIDO?! --------------*/
         System.out.println("\nPRESS A BUTTON TO START: ");
@@ -142,7 +142,6 @@ public class Main {
         //SE FOR UM ITEM
         if (Game.getINSTANCE().getRound().isItem()) {
             System.out.println("\nYOU GOT AN ITEM!\n");
-            System.out.println(Game.getINSTANCE().getRound().getItem());
             Game.getINSTANCE().getRound().gotAnItem();
             System.out.println(Game.getINSTANCE().getPlayer() + "\nVOCÊ PEGOU O ITEM!");
             
@@ -157,10 +156,11 @@ public class Main {
 
             //HE DID RUN
             if (didRun) {
-                System.out.println(Game.getINSTANCE().getPlayer() + " CORREU!");
+                System.out.println(Game.getINSTANCE().getPlayer().getName() + " CONSEGUIU CORRER!\n"); 
+                System.out.println(Game.getINSTANCE().getPlayer());
             } //HE FAILED TO RUN
             else {
-                System.out.println("INFELIZMENTE " + Game.getINSTANCE().getPlayer() + " TERÁ QUE LUTAR COM O MONSTRO!");
+                System.out.println("\nINFELIZMENTE " + Game.getINSTANCE().getPlayer().getName() + " TERÁ QUE LUTAR COM O MONSTRO!");
                 fight();
             }
         }
