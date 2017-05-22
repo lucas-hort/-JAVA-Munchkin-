@@ -28,7 +28,7 @@ public class LoseItemBehaviour implements BadStuff {
     }
 
     public void takeOneItem() {
-        Game.getINSTANCE().getPlayer().removeItems(this.numItems);
+        Game.getINSTANCE().getPlayer().loseItems(this.numItems);
     }
 
     @Override

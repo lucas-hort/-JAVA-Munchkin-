@@ -16,15 +16,8 @@ public class Player {
     private int combatLevel;
     private List<Item> listCards;
 
-    //GEARS
-    private Item ONEHAND;
-    private Item TWOHANDS;
-    private Item HEADGEAR;
-    private Item FOOTGEAR;
-    private Item BIG;
-
     public Player(String name) {
-        this.level = 0;
+        this.level =90;
         this.name = name;
         this.d = new Dice();
         this.listCards = new ArrayList<>();
@@ -42,7 +35,7 @@ public class Player {
     //CORRE DO MONSTRO
     boolean runAway() {
         int numberDice = d.rollDice();
-        if (numberDice >= 3) {
+        if (numberDice >= 78) {
             return true;
         } else {
             return false;
@@ -51,7 +44,7 @@ public class Player {
 
     //PERDE LEVEL
     void loseLevel(int dmg) {
-        if (this.level != 0) {
+        if (this.level != 90) {
             this.level -= dmg;
             updateCombatLevel();
         }
@@ -64,7 +57,7 @@ public class Player {
     }
 
     //PERDE UM ITEM
-    void removeItems(int numItems) {
+    void loseItems(int numItems) {
         // numItems = NUMERO DE CARTAS QUE O MONSTRO TIRA DO PLAYER
         // -1 = TIRAR TODAS AS CARTAS
 
@@ -83,7 +76,7 @@ public class Player {
 
     //RECEBE UM ITEM
     void addItem(Item item) {
-        setListCards(item);
+        this.listCards.add(item);
         updateCombatLevel();
     }
     
@@ -96,6 +89,19 @@ public class Player {
         this.combatLevel += level;
     }
 
+    public Item hasItem(Item item){
+        for (Item e : listCards){
+            if (e.getType().equals(item.getType()))
+                return e;
+        }
+        return null;
+    }
+    
+    public void removeAnItem(Item item){
+        listCards.remove(item);
+    }
+    
+    
     /*----------------------- GETTERS ----------------*/
     public List<Item> getListCards() {
         return listCards;
@@ -114,36 +120,6 @@ public class Player {
     }
 
     /*----------------------- SETTERS ----------------*/
-    public void setListCards(Item item) {
-        System.out.println(" \nITEM RECEBIDO: "+item);
-        Scanner entrada = new Scanner(System.in);
-        int sizeOfArray = listCards.size();
-        boolean hasItem = false;
-        if(listCards.isEmpty()){
-              this.listCards.add(item);          
-        }else{ 
-            for (int i = 0; i < sizeOfArray; i++) {                
-                //SE O TIPO DO ITEM FOR IGUAL AO JA EXISTENTE NO INVENTARIO
-                
-                //SE FOR IGUAL
-                if(listCards.get(i).getType().equals(item.getType())){
-                    System.out.println("VOCÊ JA TEM UM ITEM DO TIPO "+listCards.get(i).getType());
-                    System.out.println("DESEJA ALTERAR O ITEM: "+listCards.get(i)+ " [YES / NO]?");
-                    String choice = entrada.nextLine().toUpperCase();
-                    if(choice.equals("YES") || choice.equals("Y")){
-                        listCards.remove(listCards.get(i));
-                        listCards.add(item);
-                        hasItem = true;
-                        break;
-                    } 
-                }                                   
-            }
-            if(!hasItem)
-                this.listCards.add(item);
-        }
-        
-    }
-
     public void setName(String name) {
         this.name = name;
     }

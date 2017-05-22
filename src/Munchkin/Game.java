@@ -24,17 +24,7 @@ public class Game {
     private Player player;
     
     private Game() {
-    }       
-    
-    //ITEMS INICIAIS DO PLAYER
-    void inicialItems(){
-        int random;        
-        //TIRA 3 CARTAS ALEATORIAS DO BARALHO DE ITEM
-        for (int i = 0; i < 3; i++) {            
-            random = (int)Math.floor(Math.random()*this.itemList.size());
-            this.player.addItem(itemList.remove(random));
-        }        
-    }
+    } 
     
     //CRIA OS ROUNDS DO GAME, SE O PLAYER ATINGIR LVL 10 OU NUMERO DE ROUNDS EXCEDER 20 PARTIDAS ACABA O GAME
     boolean createRound(){        
