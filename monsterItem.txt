@@ -1,0 +1,6 @@
+5,"The Ether Bunny",8,1
+6,"Duck Holliday",6,1
+7,"Dragonfly ",10,1
+8,"BOSS",30,-1
+9,"A Mimic?!!",15,3
+10,"Shortbeard ",9,1
