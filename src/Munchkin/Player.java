@@ -126,7 +126,7 @@ public class Player {
 
     @Override
     public String toString() {
-        return "Player: " + this.name + "\nLevel = " + this.level + "\nCombat level = " + combatLevel + "\nList of Items [" + listCards.size() + "] = " + listCards;
+        return "Player: " + this.name + "\r\nLevel = " + this.level + "\r\nCombat level = " + combatLevel + "\r\nList of Items [" + listCards.size() + "] = " + listCards;
     }
 
 }

@@ -13,8 +13,9 @@ import java.util.List;
  * @author Lucas Hort
  */
 public class Game {    
-    private static Game INSTANCE;  //INSTANCIA DA CLASSE GAME
+    private static Game INSTANCE;          //INSTANCIA DA CLASSE GAME
     private static int numberOfRounds = 0; //NÚMERO DE ROUNDS
+    private static int numberOfGame = 0;   //ID DOS GAMES
     
     //BARALHO DE ITEMS E MONSTROS
     public List<Item> itemList;
@@ -69,8 +70,11 @@ public class Game {
     public static int getNumberOfRounds() {
         return numberOfRounds;
     }
-    
 
+    public static int getNumberOfGame() {
+        return numberOfGame;
+    }    
+    
     
     /* -------------------- SETTERS -------------------*/
     public void setItemList(List<Item> itemList) {

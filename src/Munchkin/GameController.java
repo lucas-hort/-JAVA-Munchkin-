@@ -1,5 +1,8 @@
 package Munchkin;
 
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -10,16 +13,21 @@ import java.util.logging.Logger;
  *
  * @author Lucas Hort
  */
-public class Main {
+public class GameController {
 
-    public static void main(String[] args) {  
+    public static void main(String[] args) throws IOException{
+        
+        FileWriter file = new FileWriter("games/GAME "+Game.getINSTANCE().getNumberOfGame()+".txt");
+        PrintWriter fileWriter = new PrintWriter(file);
+        
         
         //INICIO DO GAME      
         Scanner entrada = new Scanner(System.in);
         System.out.println("DIGITE O NICK DO PLAYER: ");
         String nome = entrada.nextLine();
         Player p = new Player(nome);
-
+        
+        
         //SETTANDO O GAME
         System.out.println("\n--------------- ** MUNCHKIN ** -------------");
         System.out.println("--------------- SETTANDO O GAME ------------");
@@ -40,7 +48,15 @@ public class Main {
         inicialItems();                                              //ITEMS INICIAIS DO PLAYER                     
         Game.getINSTANCE().getPlayer().updateCombatLevel();          //SETANDO O NIVEL DE COMBAT TO PLAYER
         System.out.println("\n" + Game.getINSTANCE().getPlayer());   //PRINTANDO OS STATUS DO PLAYER
-
+        
+        
+        //*--------------- WRITER ----------*
+        fileWriter.println("---------------- STATUS INICIAL DO PLAYER! -------------\r\n");
+        fileWriter.println(""+Game.getINSTANCE().getPlayer());
+        file.close();
+        //*--------------- WRITER ----------*
+        
+        
         /* -------------- WANNA PLAY KIDO?! --------------*/
         System.out.println("\nPRESS A BUTTON TO START: ");
         String inicio = entrada.nextLine();

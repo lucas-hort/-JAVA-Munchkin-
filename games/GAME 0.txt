@@ -1,0 +1,6 @@
+0
+---------------- STATUS INICIAL DO PLAYER! -------------
+Player: lucas hort
+Level = 0
+Combat level = 9
+List of Items [3] = [{Item: "Rapier of Unfairness" ,Bonus = +2 ,Type = "Weapon"}, {Item: "Birdhouse" ,Bonus = +4 ,Type = "Headgear"}, {Item: "Boots of Butt-Kicking" ,Bonus = +3 ,Type = "Footgear"}]
