@@ -41,8 +41,6 @@ public class ItemsReader {
                 
                 itemList.add(item);
                 
-                System.out.println(item);
-                
                 linha = lerArq.readLine();
             }
             
@@ -51,8 +49,6 @@ public class ItemsReader {
         } catch (IOException e) {
             System.err.printf("Erro na abertura do arquivo: %s.\n", e.getMessage());
         }
-        
-        System.out.println();
         
         Game.getINSTANCE().setItemList(itemList);
         

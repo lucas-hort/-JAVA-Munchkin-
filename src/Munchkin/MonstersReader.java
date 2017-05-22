@@ -18,10 +18,9 @@ import java.util.List;
 public class MonstersReader {
 
     public MonstersReader() {
-        
+
         List<Monster> monsterList = new ArrayList<>();
-        
-        
+
         //MONSTERLOSELVL
         String arquivo = "monsterLvl.txt";
 
@@ -42,8 +41,6 @@ public class MonstersReader {
                 MonsterLoseLvl monster = new MonsterLoseLvl(id, name, level, damage);
 
                 monsterList.add(monster);
-                
-                System.out.println(monster);
 
                 linha = lerArq.readLine();
             }
@@ -54,11 +51,6 @@ public class MonstersReader {
             System.err.printf("Erro na abertura do arquivo: %s.\n", e.getMessage());
         }
 
-        System.out.println();
-        
-        
-        
-        
         //MONSTERLOSEITEM
         String arquivo2 = "monsterItem.txt";
 
@@ -76,11 +68,9 @@ public class MonstersReader {
                 int level = Integer.parseInt(linhas[2]);
                 int numItem = Integer.parseInt(linhas[3]);
 
-                MonsterLoseLvl monster = new MonsterLoseLvl(id, name, level, numItem);
+                MonsterLoseItem monster = new MonsterLoseItem(id, name, level, numItem);
 
                 monsterList.add(monster);
-                
-                System.out.println(monster);
 
                 linha = lerArq.readLine();
             }
@@ -90,12 +80,8 @@ public class MonstersReader {
         } catch (IOException e) {
             System.err.printf("Erro na abertura do arquivo: %s.\n", e.getMessage());
         }
-
-        System.out.println();
-        
         Game.getINSTANCE().setMonsterList(monsterList);
-        
+
     }
-    
-    
+
 }

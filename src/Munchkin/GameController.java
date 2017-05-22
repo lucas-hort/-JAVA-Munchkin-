@@ -1,7 +1,10 @@
 package Munchkin;
 
+import java.io.File;
+import java.io.FileOutputStream;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.PrintStream;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;
@@ -14,8 +17,12 @@ import java.util.logging.Logger;
  * @author Lucas Hort
  */
 public class GameController {
+    
+    public static String log = "";
 
     public static void main(String[] args) throws IOException{
+        
+        
         
         FileWriter file = new FileWriter("games/GAME "+Game.getINSTANCE().getNumberOfGame()+".txt");
         PrintWriter fileWriter = new PrintWriter(file);
@@ -47,13 +54,12 @@ public class GameController {
         System.out.println("\n---------------- STATUS INICIAL DO PLAYER! -------------\n");
         inicialItems();                                              //ITEMS INICIAIS DO PLAYER                     
         Game.getINSTANCE().getPlayer().updateCombatLevel();          //SETANDO O NIVEL DE COMBAT TO PLAYER
-        System.out.println("\n" + Game.getINSTANCE().getPlayer());   //PRINTANDO OS STATUS DO PLAYER
+        System.out.println(Game.getINSTANCE().getPlayer());   //PRINTANDO OS STATUS DO PLAYER
         
         
         //*--------------- WRITER ----------*
-        fileWriter.println("---------------- STATUS INICIAL DO PLAYER! -------------\r\n");
-        fileWriter.println(""+Game.getINSTANCE().getPlayer());
-        file.close();
+        log += "---------------- STATUS INICIAL DO PLAYER! -------------\r\n\r\n";
+        log += ""+Game.getINSTANCE().getPlayer();
         //*--------------- WRITER ----------*
         
         
@@ -62,8 +68,15 @@ public class GameController {
         String inicio = entrada.nextLine();
         /* -------------- WANNA PLAY KIDO?! --------------*/
 
+        
         //INICIO DOS ROUNDS
         System.out.println("\n>---------------- LET'S START =] -------------<");
+        
+        
+        
+        //*--------------- WRITER ----------*
+        log += "\r\n\r\n>---------------- LET'S START =] -------------<\r\n\r\n";
+        //*--------------- WRITER ----------*
 
         while (true) {
             boolean roundsLimit = Game.getINSTANCE().createRound();
@@ -78,7 +91,9 @@ public class GameController {
                 round();
             }
         }
-
+        
+        fileWriter.print(log);
+        fileWriter.close();
     }
 
     public static void endGame() {
@@ -96,6 +111,16 @@ public class GameController {
         System.out.println("\n\n*-----------------------------------------*");
         System.out.println("*---------- NUMERO DO ROUND : " + Game.getINSTANCE().getNumberOfRounds() + " ----------*");
         System.out.println("*-----------------------------------------*");
+        
+        
+        
+        //*--------------- WRITER ----------*
+        log += "\r\n\r\n*-----------------------------------------*\r\n";
+        log += "*---------- NUMERO DO ROUND : " + Game.getINSTANCE().getNumberOfRounds() + " ----------*\r\n";
+        log += "*-----------------------------------------*\r\n";
+        //*--------------- WRITER ----------*        
+        
+        
 
         //PEGA UMA CARTA ALEATORIA DA DUNGEON
         Game.getINSTANCE().getRound().getARandomCard();
@@ -103,7 +128,16 @@ public class GameController {
         //SE FOR UM MONSTRO
         if (Game.getINSTANCE().getRound().isMonster()) {
             System.out.println("\nFIGHT WITH A MONSTER");
+            
+            //*--------------- WRITER ----------*
+            log += "\r\nFIGHT WITH A MONSTER\r\n";
+            //*--------------- WRITER ----------* 
+            
             System.out.println(Game.getINSTANCE().getRound().getMonster());
+            
+            //*--------------- WRITER ----------*
+            log += Game.getINSTANCE().getRound().getMonster()+"\r\n";
+            //*--------------- WRITER ----------* 
 
             //WANT TO RUN BABY??
             while (true) {
@@ -139,15 +173,31 @@ public class GameController {
 
     public static void wantToRun() {
         System.out.println(Game.getINSTANCE().getPlayer() + " WHANT TO RUN!");
+        
+        //*--------------- WRITER ----------*
+        log += Game.getINSTANCE().getPlayer() + " WHANT TO RUN!\r\n";
+        //*--------------- WRITER ----------* 
+        
         boolean didRun = Game.getINSTANCE().getPlayer().runAway();
 
         //HE DID RUN
         if (didRun) {
             System.out.println(Game.getINSTANCE().getPlayer().getName() + " CONSEGUIU CORRER!\n");
             System.out.println(Game.getINSTANCE().getPlayer());
+            
+            //*--------------- WRITER ----------*
+            log += Game.getINSTANCE().getPlayer().getName() + " CONSEGUIU CORRER!\r\n\r\n";
+            log += Game.getINSTANCE().getPlayer() + "\r\n";
+            //*--------------- WRITER ----------* 
+            
         } //HE FAILED TO RUN
         else {
             System.out.println("\nINFELIZMENTE " + Game.getINSTANCE().getPlayer().getName() + " TERÁ QUE LUTAR COM O MONSTRO!");
+            
+            //*--------------- WRITER ----------*
+            log += "\r\nINFELIZMENTE " + Game.getINSTANCE().getPlayer().getName() + " TERÁ QUE LUTAR COM O MONSTRO!\r\n";
+            //*--------------- WRITER ----------* 
+            
             fight();
         }
     }
@@ -161,10 +211,25 @@ public class GameController {
             System.out.println(Game.getINSTANCE().getPlayer().getName() + " GANHOU 1 LEVEL, LEVEL ATUAL = " + (Game.getINSTANCE().getPlayer().getLevel() + 1)
                     + ", COMBAT LEVEL ATUAL = " + (Game.getINSTANCE().getPlayer().getCombatLevel() + 1));
             Game.getINSTANCE().getPlayer().addLevel();
+            
+            
+            //*--------------- WRITER ----------*
+            log += Game.getINSTANCE().getPlayer().getName() + " MATOU O " + Game.getINSTANCE().getRound().getMonster() + "\r\n";
+            log += Game.getINSTANCE().getPlayer().getName() + " GANHOU 1 LEVEL, LEVEL ATUAL = " + (Game.getINSTANCE().getPlayer().getLevel() + 1)
+                    + ", COMBAT LEVEL ATUAL = " + (Game.getINSTANCE().getPlayer().getCombatLevel() + 1) + "\r\n";
+            //*--------------- WRITER ----------* 
+            
+            
         } //IF HAS DIED TO MONSTER
         else {
             System.out.println(Game.getINSTANCE().getPlayer().getName() + " PERDEU PARA " + Game.getINSTANCE().getRound().getMonster());
             Game.getINSTANCE().getRound().getMonster().performBadStuff();
+            
+            
+            //*--------------- WRITER ----------*
+            log += Game.getINSTANCE().getPlayer().getName() + " PERDEU PARA " + Game.getINSTANCE().getRound().getMonster() + "\r\n";
+            //*--------------- WRITER ----------* 
+            
         }
     }
 
@@ -180,6 +245,13 @@ public class GameController {
     //ADICIONA ITEMS
     public static void addItem(Item item) {        
         System.out.println(" \nITEM RECEBIDO: " + item);
+        
+        
+        //*--------------- WRITER ----------*
+        log += "\r\nITEM RECEBIDO: " + item + "\r\n";
+        //*--------------- WRITER ----------* 
+        
+        
         Scanner entrada = new Scanner(System.in);
         int sizeOfArray = Game.getINSTANCE().getPlayer().getListCards().size();
         boolean hasItem = false;
@@ -194,8 +266,15 @@ public class GameController {
                     System.out.println("DESEJA ALTERAR O SEU ITEM: "+inventoryItem+ " PELO ITEM RECEBIDO? [YES / NO]?");
                     String choice = entrada.nextLine().toUpperCase();
                     if(choice.equals("YES") || choice.equals("Y")){
+                        System.out.println(Game.getINSTANCE().getPlayer().getName() + " TROCOU O ITEM "+ inventoryItem);
+                        
+                        //*--------------- WRITER ----------*
+                        log += Game.getINSTANCE().getPlayer().getName() + " TROCOU O ITEM "+ inventoryItem + "\r\n";
+                        //*--------------- WRITER ----------*                        
+                        
                         Game.getINSTANCE().getPlayer().removeAnItem(inventoryItem);
-                        Game.getINSTANCE().getPlayer().addItem(item);                        
+                        Game.getINSTANCE().getPlayer().addItem(item);                       
+                        
                     }
                     hasItem = true;
                     break;

@@ -23,8 +23,21 @@ public class LoseLvlBehaviour implements BadStuff {
         doDamageToPlayer();
         if (this.damage == -1) {
             System.out.println("AHA! O MONSTRO TIROU TODOS LEVELS DO " + Game.getINSTANCE().getPlayer());
+            
+            
+            //*--------------- WRITER ----------*
+            GameController.log += "AHA! O MONSTRO TIROU TODOS LEVELS DO " + Game.getINSTANCE().getPlayer() + "\r\n";
+            //*--------------- WRITER ----------*
+            
+            
         } else {
             System.out.println("AHA! O MONSTRO TIROU " + damage + " LEVELS DO " + Game.getINSTANCE().getPlayer());
+            
+            
+            //*--------------- WRITER ----------*
+            GameController.log += "AHA! O MONSTRO TIROU " + damage + " LEVELS DO " + Game.getINSTANCE().getPlayer() + "\r\n";
+            //*--------------- WRITER ----------*            
+            
         }
 
     }

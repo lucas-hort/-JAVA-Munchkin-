@@ -16,6 +16,11 @@ public class Dice {
     
     int rollDice(){
         System.out.println("\nRolando o dado....");
+        
+        //*--------------- WRITER ----------*
+        GameController.log += "\r\nRolando o dado...." + "\r\n";
+        //*--------------- WRITER ----------* 
+        
         try {
             Thread.currentThread().sleep(3000);
         } catch (InterruptedException ex) {
@@ -23,6 +28,12 @@ public class Dice {
         }
         int number = (int)(Math.random()*6+1);
         System.out.println("Você tirou "+number+ " no DADO!");
+        
+        //*--------------- WRITER ----------*
+        GameController.log += Game.getINSTANCE().getPlayer().getName() + "tirou "+number+ " no DADO!" + "\r\n";
+        //*--------------- WRITER ----------* 
+        
+        
         return number;        
     }
 }

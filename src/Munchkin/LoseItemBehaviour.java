@@ -5,6 +5,8 @@
  */
 package Munchkin;
 
+import static Munchkin.GameController.log;
+
 /**
  *
  * @author Lucas Hort
@@ -22,8 +24,20 @@ public class LoseItemBehaviour implements BadStuff {
         takeOneItem();
         if (numItems == -1) {
             System.out.println("VIXE! O MONSTRO TIROU TODOS ITEMS DO " + Game.getINSTANCE().getPlayer());
+            
+            
+            //*--------------- WRITER ----------*
+            GameController.log += "VIXE! O MONSTRO TIROU TODOS ITEMS DO " + Game.getINSTANCE().getPlayer() + "\r\n";
+            //*--------------- WRITER ----------* 
+            
         } else {
             System.out.println("VIXE! O MONSTRO TIROU " + this.numItems + " ITEMS DO " + Game.getINSTANCE().getPlayer());
+            
+            
+            //*--------------- WRITER ----------*
+            GameController.log += "VIXE! O MONSTRO TIROU " + this.numItems + " ITEMS DO " + Game.getINSTANCE().getPlayer() + "\r\n";
+            //*--------------- WRITER ----------* 
+            
         }
     }
 
