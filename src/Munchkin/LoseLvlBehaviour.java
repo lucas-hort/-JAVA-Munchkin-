@@ -9,31 +9,50 @@ package Munchkin;
  *
  * @author Lucas Hort
  */
-public class LoseLvlBehaviour implements BadStuff{
-    int vida;
-
-    public LoseLvlBehaviour(int vida) {
-        this.vida = vida;
-    }
+public class LoseLvlBehaviour implements BadStuff {
     
+    int damage; 
+
+    public LoseLvlBehaviour(int damage) {
+        this.damage = damage;
+    }
+
     //COISA RUIM DO MONSTRO
     @Override
     public void badStuff() {
         doDamageToPlayer();
-        System.out.println("AHA! O monstro tirou "+vida+ " levels do "+Game.getINSTANCE().getPlayer());        
-        
-    }
-    
-    public void doDamageToPlayer(){
-        Game.getINSTANCE().getPlayer().loseLevel(vida);
+        if (this.damage == -1) {
+            System.out.println("AHA! O MONSTRO TIROU TODOS LEVELS DO " + Game.getINSTANCE().getPlayer());
+            
+            
+            //*--------------- WRITER ----------*
+            GameController.log += "AHA! O MONSTRO TIROU TODOS LEVELS DO " + Game.getINSTANCE().getPlayer() + "\r\n";
+            //*--------------- WRITER ----------*
+            
+            
+        } else {
+            System.out.println("AHA! O MONSTRO TIROU " + damage + " LEVELS DO " + Game.getINSTANCE().getPlayer());
+            
+            
+            //*--------------- WRITER ----------*
+            GameController.log += "AHA! O MONSTRO TIROU " + damage + " LEVELS DO " + Game.getINSTANCE().getPlayer() + "\r\n";
+            //*--------------- WRITER ----------*            
+            
+        }
+
     }
 
-    
+    private void doDamageToPlayer() {
+        Game.getINSTANCE().getPlayer().loseLevel(damage);
+    }
+
     @Override
     public String toString() {
-        return "MAKE O LOOSE " + vida + " LEVELS";
+        if (this.damage == -1) {
+            return "MAKE YOU LOOSE ALL LEVELS";
+        } else {
+            return "MAKE YOU LOOSE " + damage + " LEVELS";
+        }
     }
-    
-    
-    
+
 }

@@ -1,0 +1,5 @@
+0,"Leperchaun",4,1
+1,"Squidzilla",18,3
+2,"Harold Angel",6,1
+3,"Undead Horse",4,1
+4,"Knight of The Living Dead",11,2

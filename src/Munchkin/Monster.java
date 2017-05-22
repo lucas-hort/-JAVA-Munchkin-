@@ -30,7 +30,7 @@ public abstract class Monster extends Dungeon {
 
     @Override
     public String toString() {
-        return "MONSTRO: " +this.getName() + " ,Level = " + level + ", BadStuff = " + bd + '}';
+        return "{MONSTRO: " +this.getName() + " ,Level = " + level + ", BadStuff = " + bd + '}';
     }
     
 }

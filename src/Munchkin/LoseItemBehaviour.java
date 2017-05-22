@@ -5,32 +5,53 @@
  */
 package Munchkin;
 
+import static Munchkin.GameController.log;
+
 /**
  *
  * @author Lucas Hort
  */
-public class LoseItemBehaviour implements BadStuff{
-    private int item;
+public class LoseItemBehaviour implements BadStuff {
 
-    public LoseItemBehaviour(int item) {
-        this.item = item;
-    }    
-    
+    private int numItems;
+
+    public LoseItemBehaviour(int numItems) {
+        this.numItems = numItems;
+    }
+
     @Override
     public void badStuff() {
         takeOneItem();
-        System.out.println("VIXE! O monstro tirou "+this.item+" items do " + Game.getINSTANCE().getPlayer());  
+        if (numItems == -1) {
+            System.out.println("VIXE! O MONSTRO TIROU TODOS ITEMS DO " + Game.getINSTANCE().getPlayer());
+            
+            
+            //*--------------- WRITER ----------*
+            GameController.log += "VIXE! O MONSTRO TIROU TODOS ITEMS DO " + Game.getINSTANCE().getPlayer() + "\r\n";
+            //*--------------- WRITER ----------* 
+            
+        } else {
+            System.out.println("VIXE! O MONSTRO TIROU " + this.numItems + " ITEMS DO " + Game.getINSTANCE().getPlayer());
+            
+            
+            //*--------------- WRITER ----------*
+            GameController.log += "VIXE! O MONSTRO TIROU " + this.numItems + " ITEMS DO " + Game.getINSTANCE().getPlayer() + "\r\n";
+            //*--------------- WRITER ----------* 
+            
+        }
     }
 
-    public void takeOneItem(){
-        Game.getINSTANCE().getPlayer().removeItems(this.item);
+    public void takeOneItem() {
+        Game.getINSTANCE().getPlayer().loseItems(this.numItems);
     }
-    
+
     @Override
     public String toString() {
-        return "YOU LOOSE "+this.item+" ITEMS";
+        if (numItems == -1) {
+            return "YOU LOOSE ALL ITEMS";
+        } else {
+            return "YOU LOOSE " + this.numItems + " ITEMS";
+        }
     }
-    
-    
-    
+
 }

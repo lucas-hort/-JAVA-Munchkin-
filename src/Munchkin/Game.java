@@ -13,8 +13,9 @@ import java.util.List;
  * @author Lucas Hort
  */
 public class Game {    
-    private static Game INSTANCE;  //INSTANCIA DA CLASSE GAME
+    private static Game INSTANCE;          //INSTANCIA DA CLASSE GAME
     private static int numberOfRounds = 0; //NÚMERO DE ROUNDS
+    private static int numberOfGame = 0;   //ID DOS GAMES
     
     //BARALHO DE ITEMS E MONSTROS
     public List<Item> itemList;
@@ -24,39 +25,20 @@ public class Game {
     private Player player;
     
     private Game() {
-    }       
+    } 
     
-    //ITEMS INICIAIS DO PLAYER
-    void inicialItems(){
-        int random;
-        
-        //TIRA 3 CARTAS ALEATORIAS DO BARALHO DE ITEM
-        for (int i = 0; i < 3; i++) {            
-            random = (int)Math.floor(Math.random()*itemList.size());
-            this.player.setListCards(itemList.remove(random));
-        }        
-    }
-    
-    //CRIA OS ROUNDS DO GAME
-    void createRound(){
-        
+    //CRIA OS ROUNDS DO GAME, SE O PLAYER ATINGIR LVL 10 OU NUMERO DE ROUNDS EXCEDER 20 PARTIDAS ACABA O GAME
+    boolean createRound(){        
         //END OF THE GAME
-        if (numberOfRounds >= 10 || this.player.getLevel() >= 4){
-            if (numberOfRounds >= 10){
-                System.out.println(this.player);
-                System.out.println("\nFIM DO JOGO - SE PASSARAM 10 ROUNDS!!!!!!!!");
-            }else{
-                System.out.println("\nPARABÉNS VOCÊ ATINGIU O LEVEL 4!!!!!!!!");
-                System.out.println(this.player);
-            }            
-        
+        if (this.numberOfRounds >= 20 || this.player.getLevel() >= 10){
+            return true;
         //NEXT ROUND
         }else{
             this.numberOfRounds++;
-            System.out.println("\n>>>>>>> NUMERO DO ROUND : "+numberOfRounds+" <<<<<<<");
-            this.round = new Round();            
-        }
-        
+            //CRIA UMA RODADA
+            this.round = new Round();
+            return false;
+        }        
     }
     
     
@@ -85,6 +67,14 @@ public class Game {
         return this.round;
     }
 
+    public static int getNumberOfRounds() {
+        return numberOfRounds;
+    }
+
+    public static int getNumberOfGame() {
+        return numberOfGame;
+    }    
+    
     
     /* -------------------- SETTERS -------------------*/
     public void setItemList(List<Item> itemList) {

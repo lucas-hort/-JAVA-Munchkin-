@@ -2,12 +2,14 @@ package Munchkin;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 /**
  *
  * @author Lucas Hort
  */
 public class Player {
+
     private Dice d;
     private String name;
     private int level;
@@ -19,73 +21,94 @@ public class Player {
         this.name = name;
         this.d = new Dice();
         this.listCards = new ArrayList<>();
-    }     
-    
+    }
+
     //LUTA COM O MONSTRO
-    boolean fight(Monster monster){
-        if (this.combatLevel > monster.getLevel()){
-            System.out.println(this.name + " MATOU O "+ monster);
-            System.out.println(this.name + " GANHOU 1 LEVEL, LEVEL ATUAL = " + (this.level+1) + ", COMBAT LEVEL ATUAL = "+ (this.combatLevel+1));
+    boolean fight(Monster monster) {
+        if (this.combatLevel > monster.getLevel()) {
             return true;
-        }else{            
-            System.out.println(this.name + " PERDEU PARA "+ monster);
+        } else {
             return false;
         }
     }
-    
+
     //CORRE DO MONSTRO
-    boolean runAway(){
-        int numberDice = rollDice();
+    boolean runAway() {
+        int numberDice = d.rollDice();
         if (numberDice >= 3) {
-            System.out.println(this.name +" CORREU!");
             return true;
-        }else{
-            System.out.println("INFELIZMENTE "+this.name +" LUTARÁ COM O MONSTRO!");
+        } else {
             return false;
         }
-    } 
-    
+    }
+
     //PERDE LEVEL
-    void loseLevel(int dmg){
-        this.level -= dmg;
-        setCombatLevel();
+    void loseLevel(int dmg) {
+        for (int i = 0; i < dmg; i++) {
+            if (this.level > 0) {
+                this.level -= i;
+            }
+        }
+        updateCombatLevel();
     }
-    
+
     //ADD LEVEL
-    void addLevel(){
+    void addLevel() {
         this.level += 1;
-        setCombatLevel();
+        updateCombatLevel();
     }
-    
-    //ROLA O DADO(1 A 6)
-    int rollDice(){
-        return d.rollDice();
-    }
-    
+
     //PERDE UM ITEM
-    void removeItems(int item){
-        if (item == -1)
+    void loseItems(int numItems) {
+        // numItems = NUMERO DE CARTAS QUE O MONSTRO TIRA DO PLAYER
+        // -1 = TIRAR TODAS AS CARTAS
+
+        if (numItems == -1) {
             this.listCards = new ArrayList<>();
-        else{
-            for (int i = 0; i < item; i++){
-                if(listCards.size() > 0)
-                    this.listCards.remove(i);
-            }                
-        }            
-        setCombatLevel();
+        } else {
+            for (int i = 0; i < numItems; i++) {
+                if (listCards.size() > 0) {
+                    this.listCards.remove(0);
+                }
+            }
+        }
+        //RECALCULA O COMBATLEVEL DO PLAYER
+        updateCombatLevel();
     }
-    
+
     //RECEBE UM ITEM
-    void addItem(Item item){
+    void addItem(Item item) {
         this.listCards.add(item);
-        setCombatLevel();
+        updateCombatLevel();
     }
-    
-    
+
+    //CALCULA O COMBAT LEVEL
+    public void updateCombatLevel() {
+        this.combatLevel = 0;
+        for (Item e : listCards) {
+            this.combatLevel += e.getBonus();
+        }
+        this.combatLevel += level;
+    }
+
+    public Item hasItem(Item item) {
+        for (Item e : listCards) {
+            if (e.getType().equals(item.getType())) {
+                return e;
+            }
+        }
+        return null;
+    }
+
+    public void removeAnItem(Item item) {
+        listCards.remove(item);
+    }
+
     /*----------------------- GETTERS ----------------*/
     public List<Item> getListCards() {
         return listCards;
     }
+
     public int getCombatLevel() {
         return combatLevel;
     }
@@ -97,29 +120,15 @@ public class Player {
     public int getLevel() {
         return level;
     }
-    
-    
-    
+
     /*----------------------- SETTERS ----------------*/
-    //CALCULA O COMBAT LEVEL
-    public void setCombatLevel() {
-        this.combatLevel = 0;
-        for(Item e : listCards){
-            this.combatLevel += e.getBonus();
-        }   
-        this.combatLevel += level;
+    public void setName(String name) {
+        this.name = name;
     }
-    
-    
-    public void setListCards(Item item) {
-        this.listCards.add(item);
-    }
-    
-    
+
     @Override
     public String toString() {
-        return "Player: " + this.name + "\nLevel = " + this.level + "\nCombat level = " + combatLevel + "\nList of Items = " + listCards;
+        return "Player: " + this.name + "\r\nLevel = " + this.level + "\r\nCombat level = " + combatLevel + "\r\nList of Items [" + listCards.size() + "] = " + listCards;
     }
-    
-    
+
 }
