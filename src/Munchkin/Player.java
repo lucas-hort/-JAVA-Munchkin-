@@ -44,10 +44,12 @@ public class Player {
 
     //PERDE LEVEL
     void loseLevel(int dmg) {
-        if (this.level != 0) {
-            this.level -= dmg;
-            updateCombatLevel();
+        for (int i = 0; i < dmg; i++) {
+            if (this.level > 0) {
+                this.level -= i;
+            }
         }
+        updateCombatLevel();
     }
 
     //ADD LEVEL
@@ -71,7 +73,7 @@ public class Player {
             }
         }
         //RECALCULA O COMBATLEVEL DO PLAYER
-        updateCombatLevel();        
+        updateCombatLevel();
     }
 
     //RECEBE UM ITEM
@@ -79,7 +81,7 @@ public class Player {
         this.listCards.add(item);
         updateCombatLevel();
     }
-    
+
     //CALCULA O COMBAT LEVEL
     public void updateCombatLevel() {
         this.combatLevel = 0;
@@ -89,19 +91,19 @@ public class Player {
         this.combatLevel += level;
     }
 
-    public Item hasItem(Item item){
-        for (Item e : listCards){
-            if (e.getType().equals(item.getType()))
+    public Item hasItem(Item item) {
+        for (Item e : listCards) {
+            if (e.getType().equals(item.getType())) {
                 return e;
+            }
         }
         return null;
     }
-    
-    public void removeAnItem(Item item){
+
+    public void removeAnItem(Item item) {
         listCards.remove(item);
     }
-    
-    
+
     /*----------------------- GETTERS ----------------*/
     public List<Item> getListCards() {
         return listCards;
