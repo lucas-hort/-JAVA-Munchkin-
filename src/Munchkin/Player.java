@@ -17,7 +17,7 @@ public class Player {
     private List<Item> listCards;
 
     public Player(String name) {
-        this.level =90;
+        this.level = 0;
         this.name = name;
         this.d = new Dice();
         this.listCards = new ArrayList<>();
@@ -35,7 +35,7 @@ public class Player {
     //CORRE DO MONSTRO
     boolean runAway() {
         int numberDice = d.rollDice();
-        if (numberDice >= 78) {
+        if (numberDice >= 3) {
             return true;
         } else {
             return false;
@@ -44,7 +44,7 @@ public class Player {
 
     //PERDE LEVEL
     void loseLevel(int dmg) {
-        if (this.level != 90) {
+        if (this.level != 0) {
             this.level -= dmg;
             updateCombatLevel();
         }
@@ -66,7 +66,7 @@ public class Player {
         } else {
             for (int i = 0; i < numItems; i++) {
                 if (listCards.size() > 0) {
-                    this.listCards.remove(i);
+                    this.listCards.remove(0);
                 }
             }
         }
