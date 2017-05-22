@@ -1,5 +1,6 @@
 package Munchkin;
 
+import static Munchkin.GameController.log;
 import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -50,8 +51,13 @@ public class Round {
                 this.item = Game.getINSTANCE().itemList.remove(random);
 
             } catch (IndexOutOfBoundsException e) {
-                System.out.println(e);
+                System.out.println(e);      
                 System.out.println("SEM CARTAS DE ITEM");
+                
+                
+                //*--------------- WRITER ----------*
+                GameController.log += "SEM CARTAS DE ITEM\r\n";
+                //*--------------- WRITER ----------* 
             }
         }
 
