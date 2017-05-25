@@ -5,6 +5,11 @@
  */
 package Munchkin;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -15,7 +20,7 @@ import java.util.List;
 public class Game {    
     private static Game INSTANCE;          //INSTANCIA DA CLASSE GAME
     private static int numberOfRounds = 0; //NÚMERO DE ROUNDS
-    private static int numberOfGame = 0;   //ID DOS GAMES
+    private static int numberOfGame;   //ID DOS GAMES
     
     //BARALHO DE ITEMS E MONSTROS
     public List<Item> itemList;
@@ -41,7 +46,28 @@ public class Game {
         }        
     }
     
+    //ler o arquivo
+    void readGameId(){              
+        String arquivo = "assets/gameId.txt";
+        try {
+            
+            FileReader arq = new FileReader(arquivo);
+            BufferedReader lerArq = new BufferedReader(arq);
+            String linha = lerArq.readLine();            
+            this.numberOfGame = Integer.parseInt(linha);
+            arq.close();
+            
+        } catch (IOException e) {
+            System.err.printf("Erro na abertura do arquivo: %s.\n", e.getMessage());
+        }        
+    }
     
+    void writeGameId() throws IOException{
+        FileWriter file = new FileWriter("assets/gameId.txt");
+        PrintWriter fileWriter = new PrintWriter(file);      
+        fileWriter.print(String.valueOf(++numberOfGame));
+        fileWriter.close();
+    }
     
     /* -------------------- GETTERS -------------------*/
     //PEGA A INSTANCIA DO SINGLETON

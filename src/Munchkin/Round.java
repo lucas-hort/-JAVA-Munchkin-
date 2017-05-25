@@ -18,13 +18,6 @@ public class Round {
     public Round() {
         this.monster = null;
         this.item = null;
-        
-        /*
-        //PEGA 1 CARTA
-        createDungeon();
-
-        //COMEÇA A INTERAÇÃO 
-        theCombat(); */
     }
     
     
@@ -43,6 +36,10 @@ public class Round {
             } catch (IndexOutOfBoundsException e) {
                 System.out.println(e);
                 System.out.println("SEM CARTAS DE MONSTRO");
+                
+                //*--------------- WRITER ----------*
+                GameController.log += "SEM CARTAS DE MONSTRO\r\n";
+                //*--------------- WRITER ----------* 
             }
 
         } else {

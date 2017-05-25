@@ -22,7 +22,7 @@ public class ItemsReader {
         
         //ITEMS
         List<Item> itemList = new ArrayList<>();        
-        String arquivo = "item.txt";
+        String arquivo = "assets/item.txt";
         try {
             
             FileReader arq = new FileReader(arquivo);

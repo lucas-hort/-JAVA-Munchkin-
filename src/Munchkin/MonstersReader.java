@@ -22,7 +22,7 @@ public class MonstersReader {
         List<Monster> monsterList = new ArrayList<>();
 
         //MONSTERLOSELVL
-        String arquivo = "monsterLvl.txt";
+        String arquivo = "assets/monsterLvl.txt";
 
         try {
 
@@ -52,7 +52,7 @@ public class MonstersReader {
         }
 
         //MONSTERLOSEITEM
-        String arquivo2 = "monsterItem.txt";
+        String arquivo2 = "assets/monsterItem.txt";
 
         try {
 

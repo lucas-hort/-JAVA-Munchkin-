@@ -22,7 +22,8 @@ public class GameController {
 
     public static void main(String[] args) throws IOException{
         
-        
+        Game.getINSTANCE().readGameId();
+        Game.getINSTANCE().writeGameId();
         
         FileWriter file = new FileWriter("games/GAME "+Game.getINSTANCE().getNumberOfGame()+".txt");
         PrintWriter fileWriter = new PrintWriter(file);
@@ -85,6 +86,8 @@ public class GameController {
             if (roundsLimit) {
                 //FIM DO JOGO
                 endGame();
+                fileWriter.print(log);
+                fileWriter.close();                
                 break;
             } else {
                 //NEXT ROUND
@@ -92,17 +95,28 @@ public class GameController {
             }
         }
         
-        fileWriter.print(log);
-        fileWriter.close();
+        
     }
 
     public static void endGame() {
         if (Game.getINSTANCE().getNumberOfRounds() >= 20) {
             System.out.println("\nFIM DO JOGO - SE PASSARAM 20 ROUNDS!!!!!!!!");
             System.out.println(Game.getINSTANCE().getPlayer());
+            
+            //*--------------- WRITER ----------*
+            log += "\r\n\r\nFIM DO JOGO - SE PASSARAM 20 ROUNDS!!!!!!!!\r\n";
+            log += ""+Game.getINSTANCE().getPlayer();
+            //*--------------- WRITER ----------*
+            
         } else {
-            System.out.println("\nPARABÉNS VOCÊ ATINGIU O LEVEL 4!!!!!!!!");
+            System.out.println("\nPARABÉNS VOCÊ ATINGIU O LEVEL 10!!!!!!!!");
             System.out.println(Game.getINSTANCE().getPlayer());
+            
+            //*--------------- WRITER ----------*
+            log += "\r\n\r\nPARABÉNS VOCÊ ATINGIU O LEVEL 10!!!!!!!!\r\n";
+            log += ""+Game.getINSTANCE().getPlayer();
+            //*--------------- WRITER ----------*
+            
         }
     }
 
@@ -157,7 +171,8 @@ public class GameController {
                 fight();
             }
 
-            pressAButton();
+            pressAButton();            
+            
 
         }
         //SE FOR UM ITEM
