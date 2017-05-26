@@ -1,0 +1,393 @@
+
+ITEM RECEBIDO: {Item: "Dagger of Treachery" ,Bonus = +3 ,Type = "Weapon"}
+
+ITEM RECEBIDO: {Item: "Mercury's Treads" ,Bonus = +4 ,Type = "Footgear"}
+
+ITEM RECEBIDO: {Item: "Eleven-Foot Pole" ,Bonus = +1 ,Type = "Gloves"}
+---------------- STATUS INICIAL DO PLAYER! -------------
+
+Player: LUCAS HORT
+Level = 0
+Combat level = 8
+List of Items [3] = [{Item: "Dagger of Treachery" ,Bonus = +3 ,Type = "Weapon"}, {Item: "Mercury's Treads" ,Bonus = +4 ,Type = "Footgear"}, {Item: "Eleven-Foot Pole" ,Bonus = +1 ,Type = "Gloves"}]
+
+>---------------- LET'S START =] -------------<
+
+
+
+*-----------------------------------------*
+*---------- NUMERO DO ROUND : 1 ----------*
+*-----------------------------------------*
+
+ITEM RECEBIDO: {Item: "Rapier of Unfairness" ,Bonus = +2 ,Type = "Weapon"}
+
+
+*-----------------------------------------*
+*---------- NUMERO DO ROUND : 2 ----------*
+*-----------------------------------------*
+
+ITEM RECEBIDO: {Item: "Brawler's Gloves" ,Bonus = +2 ,Type = "Gloves"}
+LUCAS HORT TROCOU O ITEM {Item: "Eleven-Foot Pole" ,Bonus = +1 ,Type = "Gloves"}
+
+
+*-----------------------------------------*
+*---------- NUMERO DO ROUND : 3 ----------*
+*-----------------------------------------*
+
+FIGHT WITH A MONSTER
+{MONSTRO: "Undead Horse" ,Level = 6, BadStuff = MAKE YOU LOOSE 1 LEVELS}
+LUCAS HORT MATOU O {MONSTRO: "Undead Horse" ,Level = 6, BadStuff = MAKE YOU LOOSE 1 LEVELS}
+LUCAS HORT GANHOU 1 LEVEL, LEVEL ATUAL = 2, COMBAT LEVEL ATUAL = 11
+
+
+*-----------------------------------------*
+*---------- NUMERO DO ROUND : 4 ----------*
+*-----------------------------------------*
+
+ITEM RECEBIDO: {Item: "Your own pancreas" ,Bonus = +4 ,Type = "Weapon"}
+LUCAS HORT TROCOU O ITEM {Item: "Dagger of Treachery" ,Bonus = +3 ,Type = "Weapon"}
+
+
+*-----------------------------------------*
+*---------- NUMERO DO ROUND : 5 ----------*
+*-----------------------------------------*
+
+ITEM RECEBIDO: {Item: "Screw Centrifugal" ,Bonus = +5 ,Type = "Gloves"}
+LUCAS HORT TROCOU O ITEM {Item: "Brawler's Gloves" ,Bonus = +2 ,Type = "Gloves"}
+
+
+*-----------------------------------------*
+*---------- NUMERO DO ROUND : 6 ----------*
+*-----------------------------------------*
+
+ITEM RECEBIDO: {Item: "Magical Seahorse Steed" ,Bonus = +7 ,Type = "Legendary"}
+
+
+*-----------------------------------------*
+*---------- NUMERO DO ROUND : 7 ----------*
+*-----------------------------------------*
+
+FIGHT WITH A MONSTER
+{MONSTRO: "BOSS" ,Level = 30, BadStuff = YOU LOOSE ALL ITEMS}
+Player: LUCAS HORT
+Level = 1
+Combat level = 21
+List of Items [4] = [{Item: "Mercury's Treads" ,Bonus = +4 ,Type = "Footgear"}, {Item: "Your own pancreas" ,Bonus = +4 ,Type = "Weapon"}, {Item: "Screw Centrifugal" ,Bonus = +5 ,Type = "Gloves"}, {Item: "Magical Seahorse Steed" ,Bonus = +7 ,Type = "Legendary"}] WHANT TO RUN!
+
+Rolando o dado....
+LUCAS HORTtirou 2 no DADO!
+
+INFELIZMENTE LUCAS HORT TERÁ QUE LUTAR COM O MONSTRO!
+VIXE! O MONSTRO TIROU TODOS ITEMS DO Player: LUCAS HORT
+Level = 1
+Combat level = 1
+List of Items [0] = []
+LUCAS HORT PERDEU PARA {MONSTRO: "BOSS" ,Level = 30, BadStuff = YOU LOOSE ALL ITEMS}
+
+
+*-----------------------------------------*
+*---------- NUMERO DO ROUND : 8 ----------*
+*-----------------------------------------*
+
+ITEM RECEBIDO: {Item: "Dragon Lance" ,Bonus = +1 ,Type = "Weapon"}
+
+
+*-----------------------------------------*
+*---------- NUMERO DO ROUND : 9 ----------*
+*-----------------------------------------*
+
+FIGHT WITH A MONSTER
+{MONSTRO: "Flying Fish" ,Level = 9, BadStuff = YOU LOOSE 1 ITEMS}
+Player: LUCAS HORT
+Level = 1
+Combat level = 2
+List of Items [1] = [{Item: "Dragon Lance" ,Bonus = +1 ,Type = "Weapon"}] WHANT TO RUN!
+
+Rolando o dado....
+LUCAS HORTtirou 5 no DADO!
+LUCAS HORT CONSEGUIU CORRER!
+
+Player: LUCAS HORT
+Level = 1
+Combat level = 2
+List of Items [1] = [{Item: "Dragon Lance" ,Bonus = +1 ,Type = "Weapon"}]
+
+
+*-----------------------------------------*
+*---------- NUMERO DO ROUND : 10 ----------*
+*-----------------------------------------*
+
+FIGHT WITH A MONSTER
+{MONSTRO: "Puss in Boots" ,Level = 18, BadStuff = YOU LOOSE 3 ITEMS}
+Player: LUCAS HORT
+Level = 1
+Combat level = 2
+List of Items [1] = [{Item: "Dragon Lance" ,Bonus = +1 ,Type = "Weapon"}] WHANT TO RUN!
+
+Rolando o dado....
+LUCAS HORTtirou 1 no DADO!
+
+INFELIZMENTE LUCAS HORT TERÁ QUE LUTAR COM O MONSTRO!
+VIXE! O MONSTRO TIROU 3 ITEMS DO Player: LUCAS HORT
+Level = 1
+Combat level = 1
+List of Items [0] = []
+LUCAS HORT PERDEU PARA {MONSTRO: "Puss in Boots" ,Level = 18, BadStuff = YOU LOOSE 3 ITEMS}
+
+
+*-----------------------------------------*
+*---------- NUMERO DO ROUND : 11 ----------*
+*-----------------------------------------*
+
+FIGHT WITH A MONSTER
+{MONSTRO: "Dopplegangster" ,Level = 9, BadStuff = YOU LOOSE 1 ITEMS}
+Player: LUCAS HORT
+Level = 1
+Combat level = 1
+List of Items [0] = [] WHANT TO RUN!
+
+Rolando o dado....
+LUCAS HORTtirou 6 no DADO!
+LUCAS HORT CONSEGUIU CORRER!
+
+Player: LUCAS HORT
+Level = 1
+Combat level = 1
+List of Items [0] = []
+
+
+*-----------------------------------------*
+*---------- NUMERO DO ROUND : 12 ----------*
+*-----------------------------------------*
+
+ITEM RECEBIDO: {Item: "Birdhouse" ,Bonus = +4 ,Type = "Headgear"}
+
+
+*-----------------------------------------*
+*---------- NUMERO DO ROUND : 13 ----------*
+*-----------------------------------------*
+
+ITEM RECEBIDO: {Item: "Forked Tongue" ,Bonus = +2 ,Type = "Headgear"}
+
+
+*-----------------------------------------*
+*---------- NUMERO DO ROUND : 14 ----------*
+*-----------------------------------------*
+
+FIGHT WITH A MONSTER
+{MONSTRO: "Giants" ,Level = 16, BadStuff = MAKE YOU LOOSE 5 LEVELS}
+Player: LUCAS HORT
+Level = 1
+Combat level = 5
+List of Items [1] = [{Item: "Birdhouse" ,Bonus = +4 ,Type = "Headgear"}] WHANT TO RUN!
+
+Rolando o dado....
+LUCAS HORTtirou 2 no DADO!
+
+INFELIZMENTE LUCAS HORT TERÁ QUE LUTAR COM O MONSTRO!
+AHA! O MONSTRO TIROU 5 LEVELS DO Player: LUCAS HORT
+Level = 0
+Combat level = 4
+List of Items [1] = [{Item: "Birdhouse" ,Bonus = +4 ,Type = "Headgear"}]
+LUCAS HORT PERDEU PARA {MONSTRO: "Giants" ,Level = 16, BadStuff = MAKE YOU LOOSE 5 LEVELS}
+
+
+*-----------------------------------------*
+*---------- NUMERO DO ROUND : 15 ----------*
+*-----------------------------------------*
+
+ITEM RECEBIDO: {Item: "Really Short Stilts" ,Bonus = +1 ,Type = "Footgear"}
+
+
+*-----------------------------------------*
+*---------- NUMERO DO ROUND : 16 ----------*
+*-----------------------------------------*
+
+FIGHT WITH A MONSTER
+{MONSTRO: "Captain Blubber" ,Level = 22, BadStuff = MAKE YOU LOOSE 4 LEVELS}
+AHA! O MONSTRO TIROU 4 LEVELS DO Player: LUCAS HORT
+Level = 0
+Combat level = 5
+List of Items [2] = [{Item: "Birdhouse" ,Bonus = +4 ,Type = "Headgear"}, {Item: "Really Short Stilts" ,Bonus = +1 ,Type = "Footgear"}]
+LUCAS HORT PERDEU PARA {MONSTRO: "Captain Blubber" ,Level = 22, BadStuff = MAKE YOU LOOSE 4 LEVELS}
+
+
+*-----------------------------------------*
+*---------- NUMERO DO ROUND : 17 ----------*
+*-----------------------------------------*
+
+ITEM RECEBIDO: {Item: "Dwarven Boots" ,Bonus = +2 ,Type = "Footgear"}
+LUCAS HORT TROCOU O ITEM {Item: "Really Short Stilts" ,Bonus = +1 ,Type = "Footgear"}
+
+
+*-----------------------------------------*
+*---------- NUMERO DO ROUND : 18 ----------*
+*-----------------------------------------*
+
+ITEM RECEBIDO: {Item: "Dragon Steed" ,Bonus = +5 ,Type = "Legendary"}
+
+
+*-----------------------------------------*
+*---------- NUMERO DO ROUND : 19 ----------*
+*-----------------------------------------*
+
+FIGHT WITH A MONSTER
+{MONSTRO: "Were-House" ,Level = 12, BadStuff = YOU LOOSE 2 ITEMS}
+Player: LUCAS HORT
+Level = 0
+Combat level = 11
+List of Items [3] = [{Item: "Birdhouse" ,Bonus = +4 ,Type = "Headgear"}, {Item: "Dwarven Boots" ,Bonus = +2 ,Type = "Footgear"}, {Item: "Dragon Steed" ,Bonus = +5 ,Type = "Legendary"}] WHANT TO RUN!
+
+Rolando o dado....
+LUCAS HORTtirou 3 no DADO!
+
+INFELIZMENTE LUCAS HORT TERÁ QUE LUTAR COM O MONSTRO!
+VIXE! O MONSTRO TIROU 2 ITEMS DO Player: LUCAS HORT
+Level = 0
+Combat level = 5
+List of Items [1] = [{Item: "Dragon Steed" ,Bonus = +5 ,Type = "Legendary"}]
+LUCAS HORT PERDEU PARA {MONSTRO: "Were-House" ,Level = 12, BadStuff = YOU LOOSE 2 ITEMS}
+
+
+*-----------------------------------------*
+*---------- NUMERO DO ROUND : 20 ----------*
+*-----------------------------------------*
+
+FIGHT WITH A MONSTER
+{MONSTRO: "Chibithutlu" ,Level = 4, BadStuff = MAKE YOU LOOSE 1 LEVELS}
+LUCAS HORT MATOU O {MONSTRO: "Chibithutlu" ,Level = 4, BadStuff = MAKE YOU LOOSE 1 LEVELS}
+LUCAS HORT GANHOU 1 LEVEL, LEVEL ATUAL = 2, COMBAT LEVEL ATUAL = 7
+
+
+*-----------------------------------------*
+*---------- NUMERO DO ROUND : 21 ----------*
+*-----------------------------------------*
+
+ITEM RECEBIDO: {Item: "Saftinger hand print" ,Bonus = +5 ,Type = "Weapon"}
+
+
+*-----------------------------------------*
+*---------- NUMERO DO ROUND : 22 ----------*
+*-----------------------------------------*
+
+FIGHT WITH A MONSTER
+{MONSTRO: "Great Cthulhu" ,Level = 20, BadStuff = MAKE YOU LOOSE 4 LEVELS}
+AHA! O MONSTRO TIROU 4 LEVELS DO Player: LUCAS HORT
+Level = 0
+Combat level = 10
+List of Items [2] = [{Item: "Dragon Steed" ,Bonus = +5 ,Type = "Legendary"}, {Item: "Saftinger hand print" ,Bonus = +5 ,Type = "Weapon"}]
+LUCAS HORT PERDEU PARA {MONSTRO: "Great Cthulhu" ,Level = 20, BadStuff = MAKE YOU LOOSE 4 LEVELS}
+
+
+*-----------------------------------------*
+*---------- NUMERO DO ROUND : 23 ----------*
+*-----------------------------------------*
+
+ITEM RECEBIDO: {Item: "Croc Pot" ,Bonus = +2 ,Type = "Headgear"}
+
+
+*-----------------------------------------*
+*---------- NUMERO DO ROUND : 24 ----------*
+*-----------------------------------------*
+
+FIGHT WITH A MONSTER
+{MONSTRO: "Werehamster" ,Level = 11, BadStuff = MAKE YOU LOOSE 2 LEVELS}
+LUCAS HORT MATOU O {MONSTRO: "Werehamster" ,Level = 11, BadStuff = MAKE YOU LOOSE 2 LEVELS}
+LUCAS HORT GANHOU 1 LEVEL, LEVEL ATUAL = 2, COMBAT LEVEL ATUAL = 14
+
+
+*-----------------------------------------*
+*---------- NUMERO DO ROUND : 25 ----------*
+*-----------------------------------------*
+
+FIGHT WITH A MONSTER
+{MONSTRO: "Hobbes Goblin" ,Level = 9, BadStuff = MAKE YOU LOOSE 3 LEVELS}
+LUCAS HORT MATOU O {MONSTRO: "Hobbes Goblin" ,Level = 9, BadStuff = MAKE YOU LOOSE 3 LEVELS}
+LUCAS HORT GANHOU 1 LEVEL, LEVEL ATUAL = 3, COMBAT LEVEL ATUAL = 15
+
+
+*-----------------------------------------*
+*---------- NUMERO DO ROUND : 26 ----------*
+*-----------------------------------------*
+
+FIGHT WITH A MONSTER
+{MONSTRO: "Cyberman" ,Level = 15, BadStuff = YOU LOOSE 2 ITEMS}
+Player: LUCAS HORT
+Level = 2
+Combat level = 14
+List of Items [3] = [{Item: "Dragon Steed" ,Bonus = +5 ,Type = "Legendary"}, {Item: "Saftinger hand print" ,Bonus = +5 ,Type = "Weapon"}, {Item: "Croc Pot" ,Bonus = +2 ,Type = "Headgear"}] WHANT TO RUN!
+
+Rolando o dado....
+LUCAS HORTtirou 3 no DADO!
+
+INFELIZMENTE LUCAS HORT TERÁ QUE LUTAR COM O MONSTRO!
+VIXE! O MONSTRO TIROU 2 ITEMS DO Player: LUCAS HORT
+Level = 2
+Combat level = 4
+List of Items [1] = [{Item: "Croc Pot" ,Bonus = +2 ,Type = "Headgear"}]
+LUCAS HORT PERDEU PARA {MONSTRO: "Cyberman" ,Level = 15, BadStuff = YOU LOOSE 2 ITEMS}
+
+
+*-----------------------------------------*
+*---------- NUMERO DO ROUND : 27 ----------*
+*-----------------------------------------*
+
+FIGHT WITH A MONSTER
+{MONSTRO: "Gelatinous Mutant" ,Level = 18, BadStuff = YOU LOOSE 3 ITEMS}
+VIXE! O MONSTRO TIROU 3 ITEMS DO Player: LUCAS HORT
+Level = 2
+Combat level = 2
+List of Items [0] = []
+LUCAS HORT PERDEU PARA {MONSTRO: "Gelatinous Mutant" ,Level = 18, BadStuff = YOU LOOSE 3 ITEMS}
+
+
+*-----------------------------------------*
+*---------- NUMERO DO ROUND : 28 ----------*
+*-----------------------------------------*
+
+FIGHT WITH A MONSTER
+{MONSTRO: "Leperchaun" ,Level = 10, BadStuff = MAKE YOU LOOSE 2 LEVELS}
+AHA! O MONSTRO TIROU 2 LEVELS DO Player: LUCAS HORT
+Level = 1
+Combat level = 1
+List of Items [0] = []
+LUCAS HORT PERDEU PARA {MONSTRO: "Leperchaun" ,Level = 10, BadStuff = MAKE YOU LOOSE 2 LEVELS}
+
+
+*-----------------------------------------*
+*---------- NUMERO DO ROUND : 29 ----------*
+*-----------------------------------------*
+
+ITEM RECEBIDO: {Item: "Iceborn Gauntlet" ,Bonus = +3 ,Type = "Gloves"}
+
+
+*-----------------------------------------*
+*---------- NUMERO DO ROUND : 30 ----------*
+*-----------------------------------------*
+
+FIGHT WITH A MONSTER
+{MONSTRO: "Shortbeard " ,Level = 9, BadStuff = YOU LOOSE 1 ITEMS}
+Player: LUCAS HORT
+Level = 1
+Combat level = 4
+List of Items [1] = [{Item: "Iceborn Gauntlet" ,Bonus = +3 ,Type = "Gloves"}] WHANT TO RUN!
+
+Rolando o dado....
+LUCAS HORTtirou 4 no DADO!
+
+INFELIZMENTE LUCAS HORT TERÁ QUE LUTAR COM O MONSTRO!
+VIXE! O MONSTRO TIROU 1 ITEMS DO Player: LUCAS HORT
+Level = 1
+Combat level = 1
+List of Items [0] = []
+LUCAS HORT PERDEU PARA {MONSTRO: "Shortbeard " ,Level = 9, BadStuff = YOU LOOSE 1 ITEMS}
+
+
+FIM DO JOGO - SE PASSARAM 30 ROUNDS!!!!!!!!
+
+
+INFELIZMENTE VOCÊ NÃO ATINGIU LEVEL O 10!!!!!!!!
+Player: LUCAS HORT
+Level = 1
+Combat level = 1
+List of Items [0] = []

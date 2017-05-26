@@ -1,15 +1,15 @@
 12,"The Ether Bunny",8,1
 13,"Duck Holliday",6,1
-14,"Dragonfly ",13,2
+14,"Dragonfly ",13,1
 15,"BOSS",30,-1
-16,"A Mimic?!!",15,3
-17,"Shortbeard ",9,2
+16,"A Mimic?!!",15,2
+17,"Shortbeard ",9,1
 18,"Little Foot",4,1
-19,"Jackalope",15,3
+19,"Jackalope",15,2
 20,"Blog Goblin",6,1
 21,"Puss in Boots",18,2
-22,"Were-House",12,2
+22,"Were-House",12,1
 23,"Dopplegangster",9,1
-24,"Gelatinous Mutant",18,3
-25,"Cyberman",15,2
+24,"Gelatinous Mutant",18,2
+25,"Cyberman",15,1
 26,"Flying Fish",9,1

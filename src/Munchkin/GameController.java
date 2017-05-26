@@ -92,12 +92,12 @@ public class GameController {
     public static void endGame() {
         if (Game.getINSTANCE().getNumberOfRounds() >= 30) {
             System.out.println("\nFIM DO JOGO - SE PASSARAM 30 ROUNDS!!!!!!!!");
-            System.out.println("\nINFELIZMENTE VOCÊ NÃO ATINGIU O LEVEL 10!!!!!!!!");
+            System.out.println("INFELIZMENTE VOCÊ NÃO ATINGIU O LEVEL 10!!!!!!!!");
             System.out.println(Game.getINSTANCE().getPlayer());
 
             //*--------------- WRITER ----------*
             log += "\r\n\r\nFIM DO JOGO - SE PASSARAM 30 ROUNDS!!!!!!!!\r\n";
-            log += "\r\n\r\nINFELIZMENTE VOCÊ NÃO ATINGIU LEVEL O 10!!!!!!!!\r\n";
+            log += "INFELIZMENTE VOCÊ NÃO ATINGIU LEVEL O 10!!!!!!!!\r\n";
             log += "" + Game.getINSTANCE().getPlayer();
             //*--------------- WRITER ----------*
 
@@ -243,7 +243,9 @@ public class GameController {
     }
 
     //ADICIONA ITEMS
-    public static void addItem(Item item) {
+    public static void addItem(Item item) {        
+        String choice;
+        
         System.out.println(" \nITEM RECEBIDO: " + item);
 
         //*--------------- WRITER ----------*
@@ -261,8 +263,17 @@ public class GameController {
             for (int i = 0; i < sizeOfArray; i++) {
                 if (inventoryItem != null) {
                     System.out.println("VOCÊ JA TEM UM ITEM DO TIPO " + inventoryItem.getType());
-                    System.out.println("DESEJA ALTERAR O SEU ITEM: " + inventoryItem + " PELO ITEM RECEBIDO? [YES / NO]?");
-                    String choice = entrada.nextLine().toUpperCase();
+
+                    while (true) {
+                        Scanner read = new Scanner(System.in);
+                        System.out.println("DESEJA ALTERAR O SEU ITEM: " + inventoryItem + " PELO ITEM RECEBIDO? [YES(Y) / NO(N)]?");
+                        choice = entrada.nextLine().toUpperCase();
+                        if (choice.equals("YES") || choice.equals("Y") || choice.equals("NO") || choice.equals("N")) {
+                            break;
+                        } else {
+                            System.out.println("OPÇÃO INVALIDA! DIGITE YES(Y) OR NO(N): ");
+                        }
+                    }
                     if (choice.equals("YES") || choice.equals("Y")) {
                         System.out.println(Game.getINSTANCE().getPlayer().getName() + " TROCOU O ITEM " + inventoryItem);
 
