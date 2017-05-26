@@ -35,7 +35,7 @@ public class Player {
     //CORRE DO MONSTRO
     boolean runAway() {
         int numberDice = d.rollDice();
-        if (numberDice >= 3) {
+        if (numberDice >= 5) {
             return true;
         } else {
             return false;

@@ -74,7 +74,7 @@ public class GameController {
         while (true) {
             boolean roundsLimit = Game.getINSTANCE().createRound();
 
-            //CONDIÇÃO DE FIM DO JOGO , 10 RODADAS OU LVL 10
+            //CONDIÇÃO DE FIM DO JOGO , 30 RODADAS OU LVL 10
             if (roundsLimit) {
                 //FIM DO JOGO
                 endGame();
@@ -90,12 +90,14 @@ public class GameController {
     }
 
     public static void endGame() {
-        if (Game.getINSTANCE().getNumberOfRounds() >= 20) {
-            System.out.println("\nFIM DO JOGO - SE PASSARAM 20 ROUNDS!!!!!!!!");
+        if (Game.getINSTANCE().getNumberOfRounds() >= 30) {
+            System.out.println("\nFIM DO JOGO - SE PASSARAM 30 ROUNDS!!!!!!!!");
+            System.out.println("\nINFELIZMENTE VOCÊ NÃO ATINGIU O LEVEL 10!!!!!!!!");
             System.out.println(Game.getINSTANCE().getPlayer());
 
             //*--------------- WRITER ----------*
-            log += "\r\n\r\nFIM DO JOGO - SE PASSARAM 20 ROUNDS!!!!!!!!\r\n";
+            log += "\r\n\r\nFIM DO JOGO - SE PASSARAM 30 ROUNDS!!!!!!!!\r\n";
+            log += "\r\n\r\nINFELIZMENTE VOCÊ NÃO ATINGIU LEVEL O 10!!!!!!!!\r\n";
             log += "" + Game.getINSTANCE().getPlayer();
             //*--------------- WRITER ----------*
 

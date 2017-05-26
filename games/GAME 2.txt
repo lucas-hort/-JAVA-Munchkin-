@@ -1,0 +1,440 @@
+
+ITEM RECEBIDO: {Item: "Magical Seahorse Steed" ,Bonus = +7 ,Type = "Legendary"}
+
+ITEM RECEBIDO: {Item: "Croc Pot" ,Bonus = +2 ,Type = "Headgear"}
+
+ITEM RECEBIDO: {Item: "Dragon Steed" ,Bonus = +5 ,Type = "Legendary"}
+---------------- STATUS INICIAL DO PLAYER! -------------
+
+Player: LUCAS OTARIO
+Level = 0
+Combat level = 9
+List of Items [2] = [{Item: "Magical Seahorse Steed" ,Bonus = +7 ,Type = "Legendary"}, {Item: "Croc Pot" ,Bonus = +2 ,Type = "Headgear"}]
+
+>---------------- LET'S START =] -------------<
+
+
+
+*-----------------------------------------*
+*---------- NUMERO DO ROUND : 1 ----------*
+*-----------------------------------------*
+
+FIGHT WITH A MONSTER
+{MONSTRO: "Dragonfly " ,Level = 13, BadStuff = YOU LOOSE 2 ITEMS}
+Player: LUCAS OTARIO
+Level = 0
+Combat level = 9
+List of Items [2] = [{Item: "Magical Seahorse Steed" ,Bonus = +7 ,Type = "Legendary"}, {Item: "Croc Pot" ,Bonus = +2 ,Type = "Headgear"}] WHANT TO RUN!
+
+Rolando o dado....
+LUCAS OTARIOtirou 4 no DADO!
+
+INFELIZMENTE LUCAS OTARIO TERÁ QUE LUTAR COM O MONSTRO!
+VIXE! O MONSTRO TIROU 2 ITEMS DO Player: LUCAS OTARIO
+Level = 0
+Combat level = 0
+List of Items [0] = []
+LUCAS OTARIO PERDEU PARA {MONSTRO: "Dragonfly " ,Level = 13, BadStuff = YOU LOOSE 2 ITEMS}
+
+
+*-----------------------------------------*
+*---------- NUMERO DO ROUND : 2 ----------*
+*-----------------------------------------*
+
+FIGHT WITH A MONSTER
+{MONSTRO: "Cyberman" ,Level = 15, BadStuff = YOU LOOSE 2 ITEMS}
+Player: LUCAS OTARIO
+Level = 0
+Combat level = 0
+List of Items [0] = [] WHANT TO RUN!
+
+Rolando o dado....
+LUCAS OTARIOtirou 1 no DADO!
+
+INFELIZMENTE LUCAS OTARIO TERÁ QUE LUTAR COM O MONSTRO!
+VIXE! O MONSTRO TIROU 2 ITEMS DO Player: LUCAS OTARIO
+Level = 0
+Combat level = 0
+List of Items [0] = []
+LUCAS OTARIO PERDEU PARA {MONSTRO: "Cyberman" ,Level = 15, BadStuff = YOU LOOSE 2 ITEMS}
+
+
+*-----------------------------------------*
+*---------- NUMERO DO ROUND : 3 ----------*
+*-----------------------------------------*
+
+FIGHT WITH A MONSTER
+{MONSTRO: "Chibithutlu" ,Level = 4, BadStuff = MAKE YOU LOOSE 1 LEVELS}
+Player: LUCAS OTARIO
+Level = 0
+Combat level = 0
+List of Items [0] = [] WHANT TO RUN!
+
+Rolando o dado....
+LUCAS OTARIOtirou 4 no DADO!
+
+INFELIZMENTE LUCAS OTARIO TERÁ QUE LUTAR COM O MONSTRO!
+AHA! O MONSTRO TIROU 1 LEVELS DO Player: LUCAS OTARIO
+Level = 0
+Combat level = 0
+List of Items [0] = []
+LUCAS OTARIO PERDEU PARA {MONSTRO: "Chibithutlu" ,Level = 4, BadStuff = MAKE YOU LOOSE 1 LEVELS}
+
+
+*-----------------------------------------*
+*---------- NUMERO DO ROUND : 4 ----------*
+*-----------------------------------------*
+
+FIGHT WITH A MONSTER
+{MONSTRO: "Little Foot" ,Level = 4, BadStuff = YOU LOOSE 1 ITEMS}
+VIXE! O MONSTRO TIROU 1 ITEMS DO Player: LUCAS OTARIO
+Level = 0
+Combat level = 0
+List of Items [0] = []
+LUCAS OTARIO PERDEU PARA {MONSTRO: "Little Foot" ,Level = 4, BadStuff = YOU LOOSE 1 ITEMS}
+
+
+*-----------------------------------------*
+*---------- NUMERO DO ROUND : 5 ----------*
+*-----------------------------------------*
+
+FIGHT WITH A MONSTER
+{MONSTRO: "Knight of The Living Dead" ,Level = 13, BadStuff = MAKE YOU LOOSE 2 LEVELS}
+AHA! O MONSTRO TIROU 2 LEVELS DO Player: LUCAS OTARIO
+Level = 0
+Combat level = 0
+List of Items [0] = []
+LUCAS OTARIO PERDEU PARA {MONSTRO: "Knight of The Living Dead" ,Level = 13, BadStuff = MAKE YOU LOOSE 2 LEVELS}
+
+
+*-----------------------------------------*
+*---------- NUMERO DO ROUND : 6 ----------*
+*-----------------------------------------*
+
+FIGHT WITH A MONSTER
+{MONSTRO: "Werehamster" ,Level = 11, BadStuff = MAKE YOU LOOSE 2 LEVELS}
+AHA! O MONSTRO TIROU 2 LEVELS DO Player: LUCAS OTARIO
+Level = 0
+Combat level = 0
+List of Items [0] = []
+LUCAS OTARIO PERDEU PARA {MONSTRO: "Werehamster" ,Level = 11, BadStuff = MAKE YOU LOOSE 2 LEVELS}
+
+
+*-----------------------------------------*
+*---------- NUMERO DO ROUND : 7 ----------*
+*-----------------------------------------*
+
+ITEM RECEBIDO: {Item: "Mercury's Treads" ,Bonus = +4 ,Type = "Footgear"}
+
+
+*-----------------------------------------*
+*---------- NUMERO DO ROUND : 8 ----------*
+*-----------------------------------------*
+
+ITEM RECEBIDO: {Item: "Brawler's Gloves" ,Bonus = +2 ,Type = "Gloves"}
+
+
+*-----------------------------------------*
+*---------- NUMERO DO ROUND : 9 ----------*
+*-----------------------------------------*
+
+FIGHT WITH A MONSTER
+{MONSTRO: "Shortbeard " ,Level = 9, BadStuff = YOU LOOSE 2 ITEMS}
+Player: LUCAS OTARIO
+Level = 0
+Combat level = 6
+List of Items [2] = [{Item: "Mercury's Treads" ,Bonus = +4 ,Type = "Footgear"}, {Item: "Brawler's Gloves" ,Bonus = +2 ,Type = "Gloves"}] WHANT TO RUN!
+
+Rolando o dado....
+LUCAS OTARIOtirou 4 no DADO!
+
+INFELIZMENTE LUCAS OTARIO TERÁ QUE LUTAR COM O MONSTRO!
+VIXE! O MONSTRO TIROU 2 ITEMS DO Player: LUCAS OTARIO
+Level = 0
+Combat level = 0
+List of Items [0] = []
+LUCAS OTARIO PERDEU PARA {MONSTRO: "Shortbeard " ,Level = 9, BadStuff = YOU LOOSE 2 ITEMS}
+
+
+*-----------------------------------------*
+*---------- NUMERO DO ROUND : 10 ----------*
+*-----------------------------------------*
+
+FIGHT WITH A MONSTER
+{MONSTRO: "Puss in Boots" ,Level = 18, BadStuff = YOU LOOSE 2 ITEMS}
+VIXE! O MONSTRO TIROU 2 ITEMS DO Player: LUCAS OTARIO
+Level = 0
+Combat level = 0
+List of Items [0] = []
+LUCAS OTARIO PERDEU PARA {MONSTRO: "Puss in Boots" ,Level = 18, BadStuff = YOU LOOSE 2 ITEMS}
+
+
+*-----------------------------------------*
+*---------- NUMERO DO ROUND : 11 ----------*
+*-----------------------------------------*
+
+FIGHT WITH A MONSTER
+{MONSTRO: "Jackalope" ,Level = 15, BadStuff = YOU LOOSE 3 ITEMS}
+VIXE! O MONSTRO TIROU 3 ITEMS DO Player: LUCAS OTARIO
+Level = 0
+Combat level = 0
+List of Items [0] = []
+LUCAS OTARIO PERDEU PARA {MONSTRO: "Jackalope" ,Level = 15, BadStuff = YOU LOOSE 3 ITEMS}
+
+
+*-----------------------------------------*
+*---------- NUMERO DO ROUND : 12 ----------*
+*-----------------------------------------*
+
+ITEM RECEBIDO: {Item: "Ninja Tabi" ,Bonus = +3 ,Type = "Footgear"}
+
+
+*-----------------------------------------*
+*---------- NUMERO DO ROUND : 13 ----------*
+*-----------------------------------------*
+
+ITEM RECEBIDO: {Item: "Dwarven Boots" ,Bonus = +2 ,Type = "Footgear"}
+
+
+*-----------------------------------------*
+*---------- NUMERO DO ROUND : 14 ----------*
+*-----------------------------------------*
+
+ITEM RECEBIDO: {Item: "Screw Centrifugal" ,Bonus = +5 ,Type = "Gloves"}
+
+
+*-----------------------------------------*
+*---------- NUMERO DO ROUND : 15 ----------*
+*-----------------------------------------*
+
+ITEM RECEBIDO: {Item: "Forked Tongue" ,Bonus = +2 ,Type = "Headgear"}
+
+
+*-----------------------------------------*
+*---------- NUMERO DO ROUND : 16 ----------*
+*-----------------------------------------*
+
+ITEM RECEBIDO: {Item: "Boots of Butt-Kicking" ,Bonus = +3 ,Type = "Footgear"}
+LUCAS OTARIO TROCOU O ITEM {Item: "Ninja Tabi" ,Bonus = +3 ,Type = "Footgear"}
+
+
+*-----------------------------------------*
+*---------- NUMERO DO ROUND : 17 ----------*
+*-----------------------------------------*
+
+FIGHT WITH A MONSTER
+{MONSTRO: "Were-House" ,Level = 12, BadStuff = YOU LOOSE 2 ITEMS}
+VIXE! O MONSTRO TIROU 2 ITEMS DO Player: LUCAS OTARIO
+Level = 0
+Combat level = 3
+List of Items [1] = [{Item: "Boots of Butt-Kicking" ,Bonus = +3 ,Type = "Footgear"}]
+LUCAS OTARIO PERDEU PARA {MONSTRO: "Were-House" ,Level = 12, BadStuff = YOU LOOSE 2 ITEMS}
+
+
+*-----------------------------------------*
+*---------- NUMERO DO ROUND : 18 ----------*
+*-----------------------------------------*
+
+FIGHT WITH A MONSTER
+{MONSTRO: "Tigorilla" ,Level = 12, BadStuff = MAKE YOU LOOSE 3 LEVELS}
+Player: LUCAS OTARIO
+Level = 0
+Combat level = 3
+List of Items [1] = [{Item: "Boots of Butt-Kicking" ,Bonus = +3 ,Type = "Footgear"}] WHANT TO RUN!
+
+Rolando o dado....
+LUCAS OTARIOtirou 6 no DADO!
+LUCAS OTARIO CONSEGUIU CORRER!
+
+Player: LUCAS OTARIO
+Level = 0
+Combat level = 3
+List of Items [1] = [{Item: "Boots of Butt-Kicking" ,Bonus = +3 ,Type = "Footgear"}]
+
+
+*-----------------------------------------*
+*---------- NUMERO DO ROUND : 19 ----------*
+*-----------------------------------------*
+
+FIGHT WITH A MONSTER
+{MONSTRO: "Hobbes Goblin" ,Level = 9, BadStuff = MAKE YOU LOOSE 3 LEVELS}
+AHA! O MONSTRO TIROU 3 LEVELS DO Player: LUCAS OTARIO
+Level = 0
+Combat level = 3
+List of Items [1] = [{Item: "Boots of Butt-Kicking" ,Bonus = +3 ,Type = "Footgear"}]
+LUCAS OTARIO PERDEU PARA {MONSTRO: "Hobbes Goblin" ,Level = 9, BadStuff = MAKE YOU LOOSE 3 LEVELS}
+
+
+*-----------------------------------------*
+*---------- NUMERO DO ROUND : 20 ----------*
+*-----------------------------------------*
+
+FIGHT WITH A MONSTER
+{MONSTRO: "BOSS" ,Level = 30, BadStuff = YOU LOOSE ALL ITEMS}
+Player: LUCAS OTARIO
+Level = 0
+Combat level = 3
+List of Items [1] = [{Item: "Boots of Butt-Kicking" ,Bonus = +3 ,Type = "Footgear"}] WHANT TO RUN!
+
+Rolando o dado....
+LUCAS OTARIOtirou 5 no DADO!
+LUCAS OTARIO CONSEGUIU CORRER!
+
+Player: LUCAS OTARIO
+Level = 0
+Combat level = 3
+List of Items [1] = [{Item: "Boots of Butt-Kicking" ,Bonus = +3 ,Type = "Footgear"}]
+
+
+*-----------------------------------------*
+*---------- NUMERO DO ROUND : 21 ----------*
+*-----------------------------------------*
+
+FIGHT WITH A MONSTER
+{MONSTRO: "Moby Duck" ,Level = 17, BadStuff = MAKE YOU LOOSE 4 LEVELS}
+Player: LUCAS OTARIO
+Level = 0
+Combat level = 3
+List of Items [1] = [{Item: "Boots of Butt-Kicking" ,Bonus = +3 ,Type = "Footgear"}] WHANT TO RUN!
+
+Rolando o dado....
+LUCAS OTARIOtirou 2 no DADO!
+
+INFELIZMENTE LUCAS OTARIO TERÁ QUE LUTAR COM O MONSTRO!
+AHA! O MONSTRO TIROU 4 LEVELS DO Player: LUCAS OTARIO
+Level = 0
+Combat level = 3
+List of Items [1] = [{Item: "Boots of Butt-Kicking" ,Bonus = +3 ,Type = "Footgear"}]
+LUCAS OTARIO PERDEU PARA {MONSTRO: "Moby Duck" ,Level = 17, BadStuff = MAKE YOU LOOSE 4 LEVELS}
+
+
+*-----------------------------------------*
+*---------- NUMERO DO ROUND : 22 ----------*
+*-----------------------------------------*
+
+FIGHT WITH A MONSTER
+{MONSTRO: "Duck Holliday" ,Level = 6, BadStuff = YOU LOOSE 1 ITEMS}
+Player: LUCAS OTARIO
+Level = 0
+Combat level = 3
+List of Items [1] = [{Item: "Boots of Butt-Kicking" ,Bonus = +3 ,Type = "Footgear"}] WHANT TO RUN!
+
+Rolando o dado....
+LUCAS OTARIOtirou 6 no DADO!
+LUCAS OTARIO CONSEGUIU CORRER!
+
+Player: LUCAS OTARIO
+Level = 0
+Combat level = 3
+List of Items [1] = [{Item: "Boots of Butt-Kicking" ,Bonus = +3 ,Type = "Footgear"}]
+
+
+*-----------------------------------------*
+*---------- NUMERO DO ROUND : 23 ----------*
+*-----------------------------------------*
+
+ITEM RECEBIDO: {Item: "Dagger of Treachery" ,Bonus = +3 ,Type = "Weapon"}
+
+
+*-----------------------------------------*
+*---------- NUMERO DO ROUND : 24 ----------*
+*-----------------------------------------*
+
+FIGHT WITH A MONSTER
+{MONSTRO: "A Mimic?!!" ,Level = 15, BadStuff = YOU LOOSE 3 ITEMS}
+Player: LUCAS OTARIO
+Level = 0
+Combat level = 6
+List of Items [2] = [{Item: "Boots of Butt-Kicking" ,Bonus = +3 ,Type = "Footgear"}, {Item: "Dagger of Treachery" ,Bonus = +3 ,Type = "Weapon"}] WHANT TO RUN!
+
+Rolando o dado....
+LUCAS OTARIOtirou 3 no DADO!
+
+INFELIZMENTE LUCAS OTARIO TERÁ QUE LUTAR COM O MONSTRO!
+VIXE! O MONSTRO TIROU 3 ITEMS DO Player: LUCAS OTARIO
+Level = 0
+Combat level = 0
+List of Items [0] = []
+LUCAS OTARIO PERDEU PARA {MONSTRO: "A Mimic?!!" ,Level = 15, BadStuff = YOU LOOSE 3 ITEMS}
+
+
+*-----------------------------------------*
+*---------- NUMERO DO ROUND : 25 ----------*
+*-----------------------------------------*
+
+FIGHT WITH A MONSTER
+{MONSTRO: "Undead Horse" ,Level = 6, BadStuff = MAKE YOU LOOSE 1 LEVELS}
+AHA! O MONSTRO TIROU 1 LEVELS DO Player: LUCAS OTARIO
+Level = 0
+Combat level = 0
+List of Items [0] = []
+LUCAS OTARIO PERDEU PARA {MONSTRO: "Undead Horse" ,Level = 6, BadStuff = MAKE YOU LOOSE 1 LEVELS}
+
+
+*-----------------------------------------*
+*---------- NUMERO DO ROUND : 26 ----------*
+*-----------------------------------------*
+
+ITEM RECEBIDO: {Item: "Really Short Stilts" ,Bonus = +1 ,Type = "Footgear"}
+
+
+*-----------------------------------------*
+*---------- NUMERO DO ROUND : 27 ----------*
+*-----------------------------------------*
+
+FIGHT WITH A MONSTER
+{MONSTRO: "Captain Blubber" ,Level = 22, BadStuff = MAKE YOU LOOSE 4 LEVELS}
+AHA! O MONSTRO TIROU 4 LEVELS DO Player: LUCAS OTARIO
+Level = 0
+Combat level = 1
+List of Items [1] = [{Item: "Really Short Stilts" ,Bonus = +1 ,Type = "Footgear"}]
+LUCAS OTARIO PERDEU PARA {MONSTRO: "Captain Blubber" ,Level = 22, BadStuff = MAKE YOU LOOSE 4 LEVELS}
+
+
+*-----------------------------------------*
+*---------- NUMERO DO ROUND : 28 ----------*
+*-----------------------------------------*
+
+FIGHT WITH A MONSTER
+{MONSTRO: "Flying Fish" ,Level = 9, BadStuff = YOU LOOSE 1 ITEMS}
+VIXE! O MONSTRO TIROU 1 ITEMS DO Player: LUCAS OTARIO
+Level = 0
+Combat level = 0
+List of Items [0] = []
+LUCAS OTARIO PERDEU PARA {MONSTRO: "Flying Fish" ,Level = 9, BadStuff = YOU LOOSE 1 ITEMS}
+
+
+*-----------------------------------------*
+*---------- NUMERO DO ROUND : 29 ----------*
+*-----------------------------------------*
+
+FIGHT WITH A MONSTER
+{MONSTRO: "Gelatinous Mutant" ,Level = 18, BadStuff = YOU LOOSE 3 ITEMS}
+Player: LUCAS OTARIO
+Level = 0
+Combat level = 0
+List of Items [0] = [] WHANT TO RUN!
+
+Rolando o dado....
+LUCAS OTARIOtirou 1 no DADO!
+
+INFELIZMENTE LUCAS OTARIO TERÁ QUE LUTAR COM O MONSTRO!
+VIXE! O MONSTRO TIROU 3 ITEMS DO Player: LUCAS OTARIO
+Level = 0
+Combat level = 0
+List of Items [0] = []
+LUCAS OTARIO PERDEU PARA {MONSTRO: "Gelatinous Mutant" ,Level = 18, BadStuff = YOU LOOSE 3 ITEMS}
+
+
+*-----------------------------------------*
+*---------- NUMERO DO ROUND : 30 ----------*
+*-----------------------------------------*
+
+ITEM RECEBIDO: {Item: "Saftinger hand print" ,Bonus = +5 ,Type = "Weapon"}
+
+
+FIM DO JOGO - SE PASSARAM 30 ROUNDS!!!!!!!!
+Player: LUCAS OTARIO
+Level = 0
+Combat level = 5
+List of Items [1] = [{Item: "Saftinger hand print" ,Bonus = +5 ,Type = "Weapon"}]
